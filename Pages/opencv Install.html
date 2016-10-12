@@ -56,44 +56,10 @@
             left: 80px; 
         }
         .silex-id-1476256276923-6 {
-            min-height: 69px; 
-            width: 317px; 
+            min-height: 81px; 
+            width: 367px; 
             top: 107px; 
             left: 80px; 
-        }
-        .silex-id-1476264867140-8 {
-            min-height: 372px; 
-            width: 927px; 
-            top: 187px; 
-            left: 23px; 
-        }
-        .silex-id-1476227720675-1 {
-            min-height: 75px; 
-            width: 884px; 
-            top: 240px; 
-            left: 61px; 
-            border-color: #000000; 
-        }
-        .silex-id-1476289248616-0 {
-            min-height: 71px; 
-            width: 1003px; 
-            top: 112px; 
-            left: -1px; 
-            background-color: rgba(153,184,152,0.3058823529411765); 
-        }
-        .silex-id-1476228030548-2 {
-            min-height: 69px; 
-            width: 197px; 
-            top: 1px; 
-            left: 20px; 
-            background-color: rgba(147,142,141,0.20392156862745098); 
-        }
-        .silex-id-1476273261964-11 {
-            min-height: 69px; 
-            width: 254px; 
-            top: 0px; 
-            left: 253px; 
-            background-color: rgba(147,142,141,0.20392156862745098); 
         }
     </style>
     <title>rsnk's Code Blog</title>
@@ -154,15 +120,19 @@
 
 
 
-    <link href="http://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet" type="text/css" class="silex-custom-font">
+
+
+
+
 
 
 
 
     <meta name="twitter:card" content="summary">
     <style id="current-page-style">
-        .page-rsnk-s-code-blog{display:inherit; }
+        .page-ubuntu-quick-setup-scripts{display:inherit; }
     </style>
+    <link href="http://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet" type="text/css" class="silex-custom-font">
     <!-- Silex HEAD tag do not remove -->
     <!-- End of Silex HEAD tag do not remove -->
 </head>
@@ -174,8 +144,7 @@
             class="silex-element-content">
         </div>
 
-        <a id="page-rsnk-s-code-blog" data-silex-type="page" class="page-element page-link-active">rsnk's Code Blog</a><a id="page-ubuntu-quick-setup-scripts" data-silex-type="page" class="page-element">Ubuntu Quick Setup Scripts</a><a id="page-opencv-installation"
-        data-silex-type="page" class="page-element">OpenCV Installation</a></div>
+        <a id="page-ubuntu-quick-setup-scripts" data-silex-type="page" class="page-element page-link-active">Ubuntu Quick Setup Scripts</a></div>
 
 
 
@@ -201,63 +170,50 @@
 
 
             <div data-silex-type="text" class="editable-style silex-id-1476256303935-7 text-element page-ubuntu-quick-setup-scripts paged-element" data-silex-id="silex-id-1476256303935-7">
-                <div class="silex-element-content normal"><font face="trebuchet ms, sans-serif"><font color="#f3f3f3">Every two months or so I inevitably end up reinstalling Ubuntu, because I mess something or the other up. This encouraged me to speed up the reinstallation process, which is why I have a set of scripts I normally directly execute to automate the process. I will beIn case they are note directly executable from your terminal, you might have to give permissions using <br><br>$ chmod 755 &lt;filename&gt; <br><ul><li>Install Terminator, <span style="font-family: sans-serif;">zsh</span> and Anaconda&nbsp;</li><li>Setup Anaconda&nbsp;</li><li>Instal Cuda and <span style="font-family: sans-serif;">CUDNN</span></li><li>Install OpenCV<br>Note: Here, <span style="font-family: sans-serif;">libtiff</span> from anaconda is removed just before the make and reinstalled just after it, as it clashes with the system wide <span style="font-family: sans-serif;">libtiff</span> and causes problems at compile time. Similarly, there are a lot of tiny modifications done because of the sequence of execution of this set of files</li><li>Setting up other software I use&nbsp;</li><li>Setting up my code editor, etc</li></ul></font></font>
+                <div class="silex-element-content normal">
+                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">If you are using this script on a Ubuntu machine where you have installed Python directly, without a virtualenv or Anaconda, then you can directly&nbsp;<a href="../../../../../../../../"><span id="goog_727780277"></span>use this script&nbsp;(hyperlinked)<span id="goog_727780278"></span></a></div>
+                    <div
+                    style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
+                        <br>
+                </div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
+                    <br class="Apple-interchange-newline">NOTE: If anything goes wrong, and you change a CMake setting and you'd like to re-make the&nbsp;opencv&nbsp;build, then make sure you do</div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
+                    <br>
+                </div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">$ sudo rm -rf opencv/build opencv/CMakeLists.txt</div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">$ cd opencv</div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">$ git reset --hard HEAD</div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">$ cd ..</div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
+                    <br>
+                </div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">If even this doesn't work, then completely delete the opencv and opencv_contrib folders and run the shell script again</div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
+                    <br>
+                </div>
+                <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">NOTE2: If you are using Anaconda Python, then, first remove it from your environment variables (as opencv finds an incomplete QT in the anaconda folder), then manually set python 2 and 3 paths in the corresponding fields in ccmake</div>
+                <div>
                     <div>
-                        <div>
-                            <ol>
-                            </ol>
-                        </div>
+                        <ol>
+                        </ol>
                     </div>
-                </div>
-            </div>
-
-            <div data-silex-type="text" class="editable-style silex-id-1476256276923-6 text-element page-ubuntu-quick-setup-scripts paged-element" data-silex-id="silex-id-1476256276923-6">
-                <div class="silex-element-content normal">
-                    <h2><font color="#f3f3f3" class="heading2" face="trebuchet ms, sans-serif">Ubuntu Quick Setup Scripts</font></h2></div>
-            </div>
-            <div data-silex-type="text" class="editable-style silex-id-1476264867140-8 text-element page-opencv-installation paged-element" data-silex-id="silex-id-1476264867140-8">
-                <div class="silex-element-content normal">
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">If you are using this script on a Ubuntu machine where you have installed Python directly, without a virtualenv or Anaconda, then you can directly <a href="http://rsnk96.github.io/opencvDirectInstall.sh">use this script</a></div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
-                        <br>
-                    </div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
-                        <br class="Apple-interchange-newline">NOTE: If anything goes wrong, and you change a CMake setting and you'd like to re-make the&nbsp;opencv&nbsp;build, then make sure you do</div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
-                        <br>
-                    </div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">$ sudo rm -rf opencv/build opencv/CMakeLists.txt</div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">$ cd opencv</div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">$ git reset --hard HEAD</div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">$ cd ..</div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
-                        <br>
-                    </div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">If even this doesn't work, then completely delete the opencv and opencv_contrib folders and run the shell script again</div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">
-                        <br>
-                    </div>
-                    <div style="color: rgb(243, 243, 243); font-family: &quot;trebuchet ms&quot;, sans-serif;">NOTE2: If you are using Anaconda Python, then, first remove it from your environment variables (as opencv finds an incomplete QT in the anaconda folder), then manually set python 2 and 3 paths in the corresponding fields in ccmake</div>
-                </div>
-            </div>
-
-            <div data-silex-type="text" class="editable-style silex-id-1476227720675-1 text-element page-rsnk-s-code-blog paged-element" data-silex-id="silex-id-1476227720675-1">
-                <div class="silex-element-content normal">
-                    <p class="normal" style="text-align: center; "><font color="#f3f3f3" face="trebuchet ms, sans-serif" size="4">Hey there! This is me, an avid programmer, and this is where I rant about whatever Tech-related thing I want to. I also put up snippets that I find useful. Do have a look!</font></p>
-                </div>
-            </div>
-            <div data-silex-type="container" class="editable-style silex-id-1476289248616-0 container-element page-rsnk-s-code-blog paged-element" data-silex-id="silex-id-1476289248616-0">
-                <div data-silex-type="text" class="editable-style silex-id-1476228030548-2 text-element" data-silex-id="silex-id-1476228030548-2" data-silex-href="#!page-ubuntu-quick-setup-scripts">
-                    <div class="silex-element-content normal">
-                        <h2 style="text-align: center; "><font color="#f3f3f3" class="heading2" face="trebuchet ms, sans-serif">About Me</font></h2></div>
-                </div>
-                <div data-silex-type="text" class="editable-style text-element silex-id-1476273261964-11" data-silex-id="silex-id-1476273261964-11" data-silex-href="#!page-opencv-installation">
-                    <div class="silex-element-content normal">
-                        <h2 style="text-align: center; "><font color="#f3f3f3" face="trebuchet ms, sans-serif">Useful Scripts</font></h2></div>
                 </div>
             </div>
         </div>
+
+        <div data-silex-type="text" class="editable-style silex-id-1476256276923-6 text-element page-ubuntu-quick-setup-scripts paged-element" data-silex-id="silex-id-1476256276923-6">
+            <div class="silex-element-content normal">
+                <h2><font color="#f3f3f3" class="heading2" face="trebuchet ms, sans-serif">OpenCV Installation on Ubuntu</font></h2></div>
+        </div>
+
+
+
+
     </div>
+    </div>
+
+
 
 
 
