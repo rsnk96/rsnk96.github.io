@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 sudo apt-get install build-essential -y
-sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev -y
+sudo apt-get install cmake git libgtk-3-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev -y
 
 sudo apt-get install python3-numpy python3-pip python3-scipy python3-matplotlib python-dev python-matplotlib python-numpy python-scipy -y
 
@@ -14,7 +14,7 @@ sudo apt-get install python-pip python-tk libqt4-dev libqt4-opengl-dev  libeigen
 
 
 echo "GUI and openGL extensions"
-sudo apt-get install qt4-default libqt4-opengl-dev libvtk5-qt4-dev libgtk2.0-dev libgtkglext1 libgtkglext1-dev -y
+sudo apt-get install qt4-default libqt4-opengl-dev libvtk5-qt4-dev libgtk-3-dev libgtkglext1 libgtkglext1-dev -y
 
 echo "image manipulation libraries"
 sudo apt-get install libpng3 pngtools libpng12-dev libpng12-0 libpng++-dev -y
@@ -39,11 +39,10 @@ mkdir opencv
 cd opencv
 git clone https://github.com/Itseez/opencv
 git clone https://github.com/Itseez/opencv_contrib
-sudo apt-get install cmake-curses-gui -y
 cd opencv
 mkdir build
 cd build
-ccmake -DCMAKE_BUILD_TYPE=RELEASE \
+cmake -DCMAKE_BUILD_TYPE=RELEASE \
  -DCMAKE_INSTALL_PREFIX=/usr/local \
  -DINSTALL_C_EXAMPLES=ON \
  -DINSTALL_PYTHON_EXAMPLES=ON \
