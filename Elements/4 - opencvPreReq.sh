@@ -16,9 +16,10 @@ sudo apt-get install libeigen3-dev yasm libfaac-dev libopencore-amrnb-dev libope
 
 
 echo "GUI and openGL extensions"
+echo "Using Qt4+VTK5 as opencv doesn't support other VTK+QT configurations as of now"
 # First line disabled as OpenCV doesn't support newer versions of VTK +QT till now'
 #sudo apt-get install qt5-default libqt5opengl5-dev libvtk6-dev libvtk6-qt-dev libgtk2.0-dev libgtkglext1 libgtkglext1-dev -y
-sudo apt-get install qt4-default libqt4-dev libqt4-opengl-dev libvtk5-qt4-dev libgtk2.0-dev libgtkglext1 libgtkglext1-dev -y
+sudo apt-get install qt4-default libqt4-dev libqt4-opengl-dev libvtk5-qt4-dev libgtk-3-dev libgtkglext1 libgtkglext1-dev -y
 
 echo "image manipulation libraries"
 sudo apt-get install libpng3 pngtools libpng12-dev libpng12-0 libpng++-dev -y
