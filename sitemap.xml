@@ -1,17 +1,217 @@
----
-layout: null
-title : Sitemap
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% for post in site.posts %}
+
     <url>
-        <loc>{{site.url}}{{ post.url }}</loc>
+        <loc>http://localhost:4000/python/2016/11/25/restart-uwsgi.html</loc>
     </url>
-{% endfor %}
-{% for page in site.pages %}
+
     <url>
-        <loc>{{site.url}}{{ page.url }}</loc>
+        <loc>http://localhost:4000/life/2016/09/15/mid-autumn.html</loc>
     </url>
-{% endfor %}
+
+    <url>
+        <loc>http://localhost:4000/html/2016/08/08/ionic-icon-splash.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/html/2016/06/26/JavaScript-if-statement.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/html/2016/06/23/javascript-json-array.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2016/06/19/clean-git-repo.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/html/2016/06/15/angularjs-guide.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2016/06/09/install-raspbian-on-mac.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/html/2016/06/04/jekyll-pagination-with-jpages.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/life/2016/06/02/zen-of-python.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/mac/2016/05/29/Z-Modem-integration-for-iTerm2.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/database/2016/05/04/python-mysql-redis.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/2016/04/06/python-standard.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/2016/02/20/python-tips-2.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/2016/02/19/python-tips-1.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/2016/02/17/python-class.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/2016/02/06/django-permission.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/linux/2016/02/04/supervisord-celery.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2016/01/03/git-ssh-key.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/2015/12/21/django-settings.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/database/2015/11/01/mysql-table-size.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/database/2015/10/16/hadoop-ambari.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/database/2015/10/15/mysql-n-r.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/life/2015/10/04/sabah-travel.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/09/30/rsync.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/09/12/tomcat-optimize.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/09/11/tomcat-nginx-memcached-session.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/database/2015/09/01/linux-mysql.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/08/18/linux-memcached.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/07/22/cpu.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/05/09/lvs.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/database/2015/04/03/mysql-master-slave.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/03/12/linux-tomcat.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/03/03/nginx.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/03/02/shell.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/2015/02/26/python-challenge12.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/02/02/ssh-key.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/02/02/Top_command-VIRT-RES-SHR-DATA.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/2015/01/13/linux-epel.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/life/2015/01/08/first-blog.html</loc>
+    </url>
+
+
+    <url>
+        <loc>http://localhost:4000/404.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/blog/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/search/cb-search.json</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/database/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/feed.xml</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/html/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/life/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/mac/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/robots.txt</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/sitemap.xml</loc>
+    </url>
+
 </urlset>
