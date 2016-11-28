@@ -1,0 +1,63 @@
+#NOTE: If it doesn't update in the webpage, simply change the i18n to some gen thing
+
+
+- name:
+    detail: Detect Technologies
+    i18n: detect
+  desc:
+    detail: In Detect Technologies, I am a Lead Engineer in Computer Vision, and also a software developer in Python
+    i18n: detect_des
+  date:
+    detail: Present
+    i18n: detect_date
+  job:
+    detail: Computer Vision and Software Developer
+    i18n: detect_job
+  # icon: fa-gamepad
+  icon: fa-plus-square
+
+- name:
+    detail: Computer Vision Group, CFI
+    i18n: cvg
+  desc:
+    detail: I am heading CVG, CFI, IIT Madras, paving way for innovative projects in the field of Deep Learning and working closely with industries to solve challenges posed by them
+    i18n: cvg_des
+  date:
+    detail: Present
+    i18n: cvg_date
+  job:
+    detail: Club Head
+    i18n: cvg_job
+  icon: fa-cloud
+
+- name:
+    detail: Bhabha Atomic Research Centre
+    i18n: barc
+  desc:
+    detail: I worked on biomedical computer vision, image segmentation, and optimized rendering using VTK
+    # detail: Now I am in Nextcode and develop website with Python code for genetic analysis.
+    i18n: barc_des
+  date:
+    detail: Jun 2016
+    i18n: barc_date
+  job:
+    detail: R&D Trainee
+    i18n: barc_job
+  icon: fa-plus-square
+  # icon: fa-plus-square
+
+- name:
+    detail: IIT Madras
+    i18n: undergrad
+  desc:
+    detail: Now I am a student at IIT Madras, Chennai, India. I am majoring in Mechanical Engineering, with a minor in Robotics
+    # detail: Now I am in Nextcode and develop website with Python code for genetic analysis.
+    i18n: undergrad_des
+  date:
+    detail: Present
+    i18n: undergrad_date
+  job:
+    detail: Undergraduate Education
+    i18n: undergrad_job
+  icon: fa-book
+  # icon: fa-plus-square
