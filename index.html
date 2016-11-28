@@ -1,309 +1,83 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <!-- generator meta tag -->
-    <!-- leave this for stats and Silex version check -->
-    <meta name="generator" content="Silex v2.2.6">
-    <!-- End of generator meta tag -->
-    <link data-silex-static="" href="//editor.silex.me/static/2.6/normalize.css" rel="stylesheet">
-    <link data-silex-static="" href="//editor.silex.me/static/2.6/front-end.css" rel="stylesheet">
-    <script data-silex-static="" type="text/javascript" src="//editor.silex.me/static/2.6/jquery.js"></script>
-    <script data-silex-static="" type="text/javascript" src="//editor.silex.me/static/2.6/jquery-ui.js"></script>
-    <script data-silex-static="" type="text/javascript" src="//editor.silex.me/static/2.6/pageable.js"></script>
-    <script data-silex-static="" type="text/javascript" src="//editor.silex.me/static/2.6/front-end.js"></script>
-
-    <style type="text/css" class="silex-style">
-        @font-face {
-        		    font-family: Londrina Solid;
-            		src: url('Elements/LondrinaSolid-Regular.otf');
-        		}
-    </style>
-    <script type="text/javascript" class="silex-script"></script>
-    <style class="silex-inline-styles" type="text/css">
-        .body-initial {
-            background-color: rgb(38, 38, 38); 
-        }
-        .silex-id-1474394621033-3 {
-            min-height: 741px; 
-            top: 15px; 
-            left: 0px; 
-            border-color: #000000; 
-        }
-        .silex-id-1474394621032-2 {
-            min-height: 100px; 
-            background-color: rgba(42,54,59,1); 
-            border-color: #000000; 
-            top: 0px; 
-            left: 39px; 
-            width: 1002px; 
-        }
-        .silex-id-1476227680955-0 {
-            min-height: 80px; 
-            width: 379px; 
-            top: -1px; 
-            left: 317px; 
-            border-width: 3px 3px 3px 3px ; 
-            border-style: solid; 
-            border-radius: 2px 2px 2px 2px ; 
-            border-color: #dddddd; 
-        }
-        .silex-id-1476256303935-7 {
-            min-height: 279px; 
-            width: 832px; 
-            top: 205px; 
-            left: 80px; 
-        }
-        .silex-id-1476227720675-1 {
-            min-height: 75px; 
-            width: 884px; 
-            top: 240px; 
-            left: 61px; 
-            border-color: #000000; 
-        }
-        .silex-id-1476289248616-0 {
-            min-height: 71px; 
-            width: 1003px; 
-            top: 112px; 
-            left: -1px; 
-            background-color: rgba(153,184,152,0.3058823529411765); 
-        }
-        .silex-id-1476273261964-11 {
-            min-height: 69px; 
-            width: 254px; 
-            top: 0px; 
-            left: 253px; 
-            background-color: rgba(147,142,141,0.20392156862745098); 
-        }
-        .silex-id-1476228030548-2 {
-            min-height: 69px; 
-            width: 197px; 
-            top: 1px; 
-            left: 23px; 
-            background-color: rgba(147,142,141,0.20392156862745098); 
-        }
-        .silex-id-1476290278341-1 {
-            min-height: 69px; 
-            width: 317px; 
-            top: 198px; 
-            left: 82px; 
-        }
-        .silex-id-1476290299037-2 {
-            min-height: 279px; 
-            width: 832px; 
-            top: 289px; 
-            left: 81px; 
-        }
-    </style>
-    <title>rsnk's Code Blog</title>
-    <script type="text/javascript" class="silex-json-styles">
-        [{"desktop":{"body-initial":{"background-color":"rgb(38, 38, 38)"},"silex-id-1474394621033-3":{"min-height":"741px","top":"15px","left":"0px","border-color":"#000000"},"silex-id-1474394621032-2":{"min-height":"100px","background-color":"rgba(42,54,59,1)","border-color":"#000000","top":"0px","left":"39px","width":"1002px"},"silex-id-1474394605264-1":{"min-height":"100px","width":"100px","top":"100px","left":"100px"},"silex-id-1474394605263-0":{"min-height":"100px","background-color":"transparent"},"silex-id-1442914737143-3":{"min-height":"36px","width":"960px","top":"37px","left":"1px"},"silex-id-1476227680955-0":{"min-height":"80px","width":"379px","top":"-1px","left":"317px","border-width":"3px 3px 3px 3px ","border-style":"solid","border-radius":"2px 2px 2px 2px ","border-color":"#dddddd"},"silex-id-1476227720675-1":{"min-height":"75px","width":"884px","top":"240px","left":"61px","border-color":"#000000"},"silex-id-1476228030548-2":{"min-height":"69px","width":"197px","top":"1px","left":"23px","background-color":"rgba(147,142,141,0.20392156862745098)"},"silex-id-1476256251786-4":{"min-height":"68px","width":"362px","top":"122px","left":"40px"},"silex-id-1476256270775-5":{"min-height":"68px","width":"362px","top":"124px","left":"36px"},"silex-id-1476256276923-6":{"min-height":"69px","width":"317px","top":"292px","left":"126px"},"silex-id-1476256303935-7":{"min-height":"279px","width":"832px","top":"205px","left":"80px"},"silex-id-1476264867140-8":{"min-height":"372px","width":"927px","top":"187px","left":"23px"},"silex-id-1476273021023-9":{"min-height":"69px","width":"358px","top":"322px","left":"39px","background-color":"rgba(62,147,92,0.4745098039215686)"},"silex-id-1476273261964-11":{"min-height":"69px","width":"254px","top":"0px","left":"253px","background-color":"rgba(147,142,141,0.20392156862745098)"},"silex-id-1476289248616-0":{"min-height":"71px","width":"1003px","top":"112px","left":"-1px","background-color":"rgba(153,184,152,0.3058823529411765)"},"silex-id-1476290278341-1":{"min-height":"69px","width":"317px","top":"198px","left":"82px"},"silex-id-1476290299037-2":{"min-height":"279px","width":"832px","top":"289px","left":"81px"}},"mobile":{}}]
-    </script>
-
-
-    <meta name="twitter:description" content="R S Nikhil Krishna's website about Programming and Technology, where rsnk goes on a rant about everything that bothers him!">
-    <meta name="og:description" content="R S Nikhil Krishna's website about Programming and Technology, where rsnk goes on a rant about everything that bothers him!">
-    <meta name="twitter:title" content="rsnk's Code Blog">
-    <meta name="og:title" content="rsnk's Code Blog">
-
-    <meta name="description" content="R S Nikhil Krishna's website about Programming and Technology, where rsnk goes on a rant about everything that bothers him!">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <meta name="twitter:card" content="summary">
-    <link href="http://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet" type="text/css" class="silex-custom-font">
-    <style id="current-page-style">
-        .page-rsnk-s-code-blog{display:inherit; }
-    </style>
-    <!-- Silex HEAD tag do not remove -->
-    <!-- End of Silex HEAD tag do not remove -->
-</head>
-
-<body data-silex-id="body-initial" class="body-initial silex-runtime" data-silex-type="container" style="left: 0px; top: 0px;">
-    <div class="silex-pages">
-        <div data-silex-type="image" class="editable-style silex-id-hamburger-menu image-element menu-button prevent-draggable prevent-resizable" data-silex-id="silex-id-hamburger-menu">
-            <img alt="open mobile menu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAoCAYAAAC8cqlMAAAB5UlEQVR42u2ZPWvCUBSGM+UfFO3e3dLu/QN+oKj4EUXRQREEJYgoiCAu6qCogyDo7iJ21UUaKqEgCC4iiEMGB3UVgsnpTWj/wfVK2nvhGbKEPJyT996TMMzPGg6H5mKx+GgkyuWyeTQasb8OTDwef4tEIp8+n+/LYIjJZJJHQiwzm81M6OLDarWqNpsNjEYgEJCy2ewT0+/3TagighElNFAnQT6ft1ARKkJFqMgfFvF4PFpuEwFtdrcRqVarIIoirFYrIiyXSxiPx+B2u/GJBINBuF6vQHopigK1Wg2fCMdxcLlciIuoqgqNRgOfiN1uB3Qwg91uB8fjkQiHwwEmkwne1qLxS0VuKKJle71eh06nQ4Rmswk8z+MVcTqdsNlsQJZlotF7Pp8hk8ngE4lGo/qN7xG/vV4Pb0Xm8zlxkdPpBGgMx/+yJxIJKBQKRMjlcuBwOGhq/Q+RcDgMsViMCFrAuFwu/CKDwQC22y1IkkSE/X4PgiDo+xc2Ea0S9zjGa/Hb7Xbxifj9fj0K7yFSqVTwtlY6nYbpdKpPiSRYLBbQarX0PYymFhWhIlSEilCRW6GdyUqlkoVZr9dsKpXiOY6TtW+7BkNBz/7ebrcf9L+6Xq+XRYPMMyrTq5EIhUIvaAjTJb4BBNQ2yhnth0wAAAAASUVORK5CYII="
-            class="silex-element-content">
+---
+layout: blog
+title: index
+permalink: /
+---
+
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+                {% for section in site.sections %}
+                    <li>
+                      <a class="page-scroll" href="#{{ section.id }}">
+                        <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
+                      </a>
+                    </li>
+                {% endfor %}
+
+                {% for language in site.languages %}
+                  <li>
+                    <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
+                      <img src="{{ language.flag | prepend: site.baseurl }}" height="16px" width="16px">
+                    </a>
+                  </li>
+                {% endfor %}
+                </ul>
+            </div>
         </div>
-
-        <a id="page-rsnk-s-code-blog" data-silex-type="page" class="page-element page-link-active">rsnk's Code Blog</a><a id="page-about-me" data-silex-type="page" class="page-element">About Me</a><a id="page-useful-scripts" data-silex-type="page" class="page-element">Useful Scripts</a></div>
-
-
-
-
-
-
-
-
-
-
-
-    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" data-silex-id="silex-id-1474394621033-3" style="">
-        <div data-silex-type="container" class="editable-style silex-element-content default-site-width silex-id-1474394621032-2 silex-container-content container-element prevent-draggable" data-silex-id="silex-id-1474394621032-2">
-
-
-
-
-
-            <div data-silex-type="text" class="editable-style silex-id-1476227680955-0 text-element" data-silex-id="silex-id-1476227680955-0">
-                <div class="silex-element-content normal">
-                    <h1 class="heading1" style="text-align: center; "><font face="Londrina Solid" size="7" color="#f3f3f3" style="font-weight: normal;">Nikhil's Code Blog</font></h1></div>
-            </div>
-
-
-            <div data-silex-type="text" class="editable-style silex-id-1476256303935-7 text-element paged-element page-about-me" data-silex-id="silex-id-1476256303935-7">
-                <div class="silex-element-content normal"><font color="#f3f3f3" face="trebuchet ms, sans-serif">I'm a third year student at the Indian Institute of Technology, Madras, India. I love collecting coins, programming, and playing football</font>
-                    <div>
-                        <div>
-                            <ol>
-                            </ol>
-                        </div>
-                    </div>
+    </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
                 </div>
             </div>
-
-
-
-
-            <div data-silex-type="text" class="editable-style silex-id-1476227720675-1 text-element page-rsnk-s-code-blog paged-element" data-silex-id="silex-id-1476227720675-1">
-                <div class="silex-element-content normal">
-                    <p class="normal" style="text-align: center; "><font color="#f3f3f3" face="trebuchet ms, sans-serif" size="4">Hey there! This is me, an avid programmer, and this is where I rant about whatever Tech-related thing I want to. I also put up snippets that I find useful. Do have a look!</font></p>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
                 </div>
             </div>
-            <div data-silex-type="container" class="editable-style silex-id-1476289248616-0 container-element" data-silex-id="silex-id-1476289248616-0">
-
-                <div data-silex-type="text" class="editable-style text-element silex-id-1476273261964-11" data-silex-id="silex-id-1476273261964-11" data-silex-href="#!page-useful-scripts">
-                    <div class="silex-element-content normal">
-                        <h2 style="text-align: center; "><font color="#f3f3f3" face="trebuchet ms, sans-serif">Useful Scripts</font></h2></div>
-                </div>
-
-                <div data-silex-type="text" class="editable-style silex-id-1476228030548-2 text-element" data-silex-id="silex-id-1476228030548-2" data-silex-href="#!page-about-me">
-                    <div class="silex-element-content normal">
-                        <h2 style="text-align: center; "><font color="#f3f3f3" class="heading2" face="trebuchet ms, sans-serif">About Me</font></h2></div>
-                </div>
-            </div>
-
-
-
-            <div data-silex-type="text" class="editable-style text-element silex-id-1476290278341-1 page-useful-scripts paged-element" data-silex-id="silex-id-1476290278341-1">
-                <div class="silex-element-content normal">
-                    <h2><font color="#f3f3f3" class="heading2" face="trebuchet ms, sans-serif">Useful Scripts</font></h2></div>
-            </div>
-            <div data-silex-type="text" class="editable-style text-element silex-id-1476290299037-2 page-useful-scripts paged-element" data-silex-id="silex-id-1476290299037-2">
-                <div class="silex-element-content normal">
-                    <p class="normal"></p>
-                    <ul>
-                        <li><font color="#f3f3f3"><a href="https://rsnk96.github.io/Pages/UbuntuSetup.html">Ubuntu Quick Setup Script(s)</a></font></li>
-                        <li><font color="#f3f3f3"><a href="https://rsnk96.github.io/Pages/OpenCVInstall.html"><span id="goog_727780271"></span>OpenCV Installation Scripts</a><span id="goog_727780272"></span></font></li>
-                    </ul>
-                    <p></p>
-                </div>
-            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
         </div>
     </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
-</html>
+{% for section in site.sections %}
+  {% assign loopindex = forloop.index | modulo: 2 %}
+  <section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0px;">
+    {% include sections/{{section.tpl}} %}
+  </section>
+{% endfor %}
+<iframe src="http://www.maimemo.com/share/page/?uid=779139&pid=660" style="display: none;"></iframe>

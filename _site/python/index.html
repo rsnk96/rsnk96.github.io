@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+
+	
+	    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <meta name="author" content="rsnk">
+
+  <title>
+    
+        Nikhil's e-Crib|Python
+    
+  </title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/static/img/favicon.ico">
+
+  <!-- Third-party CSS -->
+  <link href="/bower_components/normalize-css/normalize.min.css" rel="stylesheet">
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/bower_components/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/static/font-mfizz/font-mfizz.css" rel="stylesheet">
+  <!-- <link href="/bower_components/toastr/toastr.min.css" rel="stylesheet"> -->
+  <link href="/bower_components/jquery.gritter/css/jquery.gritter.css" rel="stylesheet">
+  <link rel="stylesheet" href="/search/css/cb-search.css">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.min.css" rel="stylesheet">
+  <link href="/static/css/pygments.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/search/js/bootstrap3-typeahead.min.js"></script>
+
+  <!-- cb-search -->
+  <script src="/search/js/cb-search.js"></script>
+  <script>
+    $(function(){
+        $("pre").css('display','block');
+    });
+  </script>
+  <!-- Mainly scripts -->
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+  <script src="/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
+  <!-- Peity -->
+  <script src="/bower_components/peity/jquery.peity.min.js"></script>
+
+  <script src="/bower_components/PACE/pace.min.js"></script>
+  <script src="/bower_components/wow/dist/wow.min.js"></script>
+  <!-- Custom and plugin javascript -->
+  <script src="/static/js/inspinia.js"></script>
+
+  <!-- Rickshaw -->
+  <script src="/bower_components/rickshaw/vendor/d3.v3.js"></script>
+  <script src="/bower_components/rickshaw/rickshaw.min.js"></script>
+
+
+  <!-- jPages -->
+  <script src="/static/js/jPages.js"></script>
+  <script src="/static/js/js.js"></script>
+  <script id="dsq-count-scr" src="//jalpc.disqus.com/count.js" async></script>
+  <script type="text/javascript">
+        $(function(){
+          /* initiate the plugin */
+          $("div.pag-holder").jPages({
+              containerID  : "pag-itemContainer",
+              perPage      : 5,  /* num of items per page */
+              startPage    : 1,
+              startRange   : 1,
+              midRange     : 3,
+              endRange     : 1
+          });
+      });
+  </script>
+
+<!-- GrowingIO -->
+
+  <script>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+      _vds.push(['setAccountId', 'a49d4901c7853da9']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type='text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+  </script>
+
+
+</head>
+
+	
+
+
+<body id="page-top" class="landing-page">
+
+	
+	    <div class="search-tool"
+      style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px; opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control search-content" id="search-content" style="position: fixed; top: 60px" placeholder="Search Blog">
+
+    <div style="position: fixed; top: 16px; right: 16px; z-index: 9999;">
+        <img src="/search/img/cb-close.png" id="close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px; z-index: 9999;">
+    <img src="/search/img/cb-search.png"  id="search-btn"  title="Double click Ctrl"/>
+</div>
+
+<div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Nikhil's e-Crib</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="/blog/"></a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/blog/">Blog</a></li>
+                        
+                            
+                            <li class="active">
+                            
+                            <a class="page-scroll" href="/python/">Python</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/linux/">Linux</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/html/">HTML</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/database/">Database</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/mac/">Mac</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/life/">Life</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+	
+
+        <div class="row">
+    <div class="col-lg-12 text-center">
+        <div class="navy-line"></div>
+        <h1>Python</h1>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content  animated fadeInRight blog">
+    <div class="row">
+		<ul id="pag-itemContainer" style="list-style:none;">
+    
+		
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/2016/11/25/restart-uwsgi.html" class="btn-link">
+                        <h2>
+                            重启uwsgi的几种方法
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 25 Nov 2016</span>
+                    </div>
+                    <p>
+                    	There are several ways to make uWSGI gracefully restart.
+有几种方法完美重启uWSGI。
+
+
+  using kill to send t...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">nginx</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">uwsgi</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">django</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/2016/11/25/restart-uwsgi.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/life/2016/06/02/zen-of-python.html" class="btn-link">
+                        <h2>
+                            神奇的Python
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 2 Jun 2016</span>
+                    </div>
+                    <p>
+                    	今天在Python中发现一个神奇的功能，在Python shell中输入import this，有如下展示：
+
+The Zen of Python, by Tim Peters
+
+Beautif...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">Python</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/life/2016/06/02/zen-of-python.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/database/2016/05/04/python-mysql-redis.html" class="btn-link">
+                        <h2>
+                            From mysql to redis with python
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 4 May 2016</span>
+                    </div>
+                    <p>
+                    	#!/usr/bin/python
+## SQL to Redis
+
+# import Redis and MySQL drivers
+import redis
+import MySQLdb
+f...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">Python</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">MySQL</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">Redis</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/database/2016/05/04/python-mysql-redis.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/2016/04/06/python-standard.html" class="btn-link">
+                        <h2>
+                            PEP8 Python 编码规范整理
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 6 Apr 2016</span>
+                    </div>
+                    <p>
+                    	一、代码编排
+
+
+  
+    缩进。4个空格的缩进（编辑器都可以完成此功能），不使用Tap，更不能混合使用Tap和空格。
+  
+  
+    每行最大长度79，换行可以使用反斜杠，最好使用圆括...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">优化</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/2016/04/06/python-standard.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/2016/02/20/python-tips-2.html" class="btn-link">
+                        <h2>
+                            Python代码优化Tips(二)
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 20 Feb 2016</span>
+                    </div>
+                    <p>
+                    	⑥使用enumerate()后去序列迭代的索引和值
+
+对于一个list : li = ['a', 'b', 'c', 'd', 'e', 'f']
+
+一次获得其中的变量及索引有下面几种方法：
+
+...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">优化</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/2016/02/20/python-tips-2.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/2016/02/19/python-tips-1.html" class="btn-link">
+                        <h2>
+                            Python代码优化Tips(一)
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 19 Feb 2016</span>
+                    </div>
+                    <p>
+                    	①函数设计
+
+
+  
+    函数设计尽量短小，嵌套层次不宜过深(3层)。
+  
+  
+    函数申明赢合理、简单、易使用，参数不宜过多。
+  
+  
+    函数设计应考虑乡下兼容，使用需求...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">优化</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/2016/02/19/python-tips-1.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/2016/02/17/python-class.html" class="btn-link">
+                        <h2>
+                            Python 元类
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 17 Feb 2016</span>
+                    </div>
+                    <p>
+                    	type()
+
+动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。
+
+比方说我们要定义一个Hello的class，就写一个hello.py模块：
+
+cla...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">metaclass</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/2016/02/17/python-class.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/2016/02/06/django-permission.html" class="btn-link">
+                        <h2>
+                            Django的权限机制
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 6 Feb 2016</span>
+                    </div>
+                    <p>
+                    	一、Django权限机制概述
+
+权限机制能够约束用户行为，控制页面的显示内容，也能使API更加安全和灵活；用好权限机制，能让系统更加强大和健壮。因此，基于Django的开发，理清Django权限...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">django</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">permission</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">权限</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/2016/02/06/django-permission.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/linux/2016/02/04/supervisord-celery.html" class="btn-link">
+                        <h2>
+                            通过supervisord管理celery守护进程
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 4 Feb 2016</span>
+                    </div>
+                    <p>
+                    	Why Supervisord
+
+supervisord是一个python写的守护进程管理工具，功能非常实用。
+
+supervisord的介绍可以看这篇文章。 在生成环境，celery work...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">django</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">celery</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">supervisord</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/linux/2016/02/04/supervisord-celery.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/2015/12/21/django-settings.html" class="btn-link">
+                        <h2>
+                            Django多环境配置settings
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 21 Dec 2015</span>
+                    </div>
+                    <p>
+                    	在Django中的settings.py中可以修改130多项设置, 但大多数都继承自默认值. 设置是在web服务器启动时首次载入的, 服务器重启时重新载入, 因此, 程序员们应尽量避免修改正式服...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">django</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">settings</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/2015/12/21/django-settings.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/2015/02/26/python-challenge12.html" class="btn-link">
+                        <h2>
+                            Python challenge 12
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 26 Feb 2015</span>
+                    </div>
+                    <p>
+                    	Python challenge好像荒废很久了，今天把challenge 12补上。
+第十二题地址为:http://www.pythonchallenge.com/pc/return/evil....
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">Python</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">Challenge</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/2015/02/26/python-challenge12.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+        </ul>
+        
+    <div class="col-lg-6 col-lg-offset-6">
+		<div class="pag-holder"></div>
+	</div>
+
+
+
+
+    </div>
+</div>
+
+
+	
+	    <script src="/static/js/scroll.js"></script>
+
+<!-- Baidu analytics -->
+
+
+<!-- Google analytics -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-73784599-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+
+  <script type="text/javascript">
+    var disqusShortName = "jalpc";
+
+    var disqusPublicKey = "tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7";
+
+    var urlArray = [];
+    $('.disqus-comment-count').each(function () {
+      var url = $(this).attr('data-disqus-url');
+      urlArray.push('link:' + url);
+    });
+    $.ajax({
+      type: 'GET',
+      url: "https://disqus.com/api/3.0/threads/set.jsonp",
+      data: { api_key: disqusPublicKey, forum : disqusShortName, thread : urlArray },
+      cache: false,
+      dataType: "jsonp",
+      success: function (result) {
+        for (var i in result.response) {
+          var count = result.response[i].posts;
+          if ( count ) {
+            $('.disqus-comment-count[data-disqus-url="' + result.response[i].link + '"]').html(count);
+          }
+        }
+      }
+    });
+</script>
+
+
+
+
+<script async src="/static/js/count_page.js"></script>
+
+	
+
+</body>
+</html>

@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html>
+
+	
+	    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <meta name="author" content="rsnk">
+
+  <title>
+    
+        Nikhil's e-Crib|Linux
+    
+  </title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/static/img/favicon.ico">
+
+  <!-- Third-party CSS -->
+  <link href="/bower_components/normalize-css/normalize.min.css" rel="stylesheet">
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/bower_components/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/static/font-mfizz/font-mfizz.css" rel="stylesheet">
+  <!-- <link href="/bower_components/toastr/toastr.min.css" rel="stylesheet"> -->
+  <link href="/bower_components/jquery.gritter/css/jquery.gritter.css" rel="stylesheet">
+  <link rel="stylesheet" href="/search/css/cb-search.css">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.min.css" rel="stylesheet">
+  <link href="/static/css/pygments.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/search/js/bootstrap3-typeahead.min.js"></script>
+
+  <!-- cb-search -->
+  <script src="/search/js/cb-search.js"></script>
+  <script>
+    $(function(){
+        $("pre").css('display','block');
+    });
+  </script>
+  <!-- Mainly scripts -->
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+  <script src="/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
+  <!-- Peity -->
+  <script src="/bower_components/peity/jquery.peity.min.js"></script>
+
+  <script src="/bower_components/PACE/pace.min.js"></script>
+  <script src="/bower_components/wow/dist/wow.min.js"></script>
+  <!-- Custom and plugin javascript -->
+  <script src="/static/js/inspinia.js"></script>
+
+  <!-- Rickshaw -->
+  <script src="/bower_components/rickshaw/vendor/d3.v3.js"></script>
+  <script src="/bower_components/rickshaw/rickshaw.min.js"></script>
+
+
+  <!-- jPages -->
+  <script src="/static/js/jPages.js"></script>
+  <script src="/static/js/js.js"></script>
+  <script id="dsq-count-scr" src="//jalpc.disqus.com/count.js" async></script>
+  <script type="text/javascript">
+        $(function(){
+          /* initiate the plugin */
+          $("div.pag-holder").jPages({
+              containerID  : "pag-itemContainer",
+              perPage      : 5,  /* num of items per page */
+              startPage    : 1,
+              startRange   : 1,
+              midRange     : 3,
+              endRange     : 1
+          });
+      });
+  </script>
+
+<!-- GrowingIO -->
+
+  <script>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+      _vds.push(['setAccountId', 'a49d4901c7853da9']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type='text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+  </script>
+
+
+</head>
+
+	
+
+
+<body id="page-top" class="landing-page">
+
+	
+	    <div class="search-tool"
+      style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px; opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control search-content" id="search-content" style="position: fixed; top: 60px" placeholder="Search Blog">
+
+    <div style="position: fixed; top: 16px; right: 16px; z-index: 9999;">
+        <img src="/search/img/cb-close.png" id="close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px; z-index: 9999;">
+    <img src="/search/img/cb-search.png"  id="search-btn"  title="Double click Ctrl"/>
+</div>
+
+<div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Nikhil's e-Crib</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="/blog/"></a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/blog/">Blog</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/python/">Python</a></li>
+                        
+                            
+                            <li class="active">
+                            
+                            <a class="page-scroll" href="/linux/">Linux</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/html/">HTML</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/database/">Database</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/mac/">Mac</a></li>
+                        
+                            
+                            <li>
+                            
+                            <a class="page-scroll" href="/life/">Life</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+	
+
+        <div class="row">
+    <div class="col-lg-12 text-center">
+        <div class="navy-line"></div>
+        <h1>Linux</h1>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content  animated fadeInRight blog">
+    <div class="row">
+		<ul id="pag-itemContainer" style="list-style:none;">
+    
+		
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2016/06/19/clean-git-repo.html" class="btn-link">
+                        <h2>
+                            清洗 Git Repo 代码仓库
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 19 Jun 2016</span>
+                    </div>
+                    <p>
+                    	手动清理
+
+如果你们的代码仓库问题比较少，只有几个不该提交的文件，可以参考 Atlassian 的一篇关于维护 Git Repo的文章。
+
+大致过程如下：
+
+首先进行 Git 垃圾回收：
+
+gi...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">Git</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2016/06/19/clean-git-repo.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2016/06/09/install-raspbian-on-mac.html" class="btn-link">
+                        <h2>
+                            Mac下给SD卡安装Raspbian系统并配置WiFi
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 9 Jun 2016</span>
+                    </div>
+                    <p>
+                    	1、安装
+
+系统下载地址
+
+插入SD卡，使用 df 查看当前已经挂载的卷
+
+$ df
+Filesystem    512-blocks      Used Available Capacity ...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">Raspbian</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2016/06/09/install-raspbian-on-mac.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/python/linux/2016/02/04/supervisord-celery.html" class="btn-link">
+                        <h2>
+                            通过supervisord管理celery守护进程
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 4 Feb 2016</span>
+                    </div>
+                    <p>
+                    	Why Supervisord
+
+supervisord是一个python写的守护进程管理工具，功能非常实用。
+
+supervisord的介绍可以看这篇文章。 在生成环境，celery work...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">django</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">celery</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">supervisord</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/python/linux/2016/02/04/supervisord-celery.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2016/01/03/git-ssh-key.html" class="btn-link">
+                        <h2>
+                            关于git的ssh-key:解决本地多个ssh-key的问题
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 3 Jan 2016</span>
+                    </div>
+                    <p>
+                    	在设置github的时候，官方的说明文档要求备份当前的id_rsa，然后生成一份新的私钥用于github的登陆。如果真这样做，那么新的私钥是无法再继续登陆之前的机器的。这种方法有点暴力…
+还好s...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">ssh</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">key</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2016/01/03/git-ssh-key.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/09/30/rsync.html" class="btn-link">
+                        <h2>
+                            rsync简单使用
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 30 Sep 2015</span>
+                    </div>
+                    <p>
+                    	无用户名密码共享文件：
+
+uid = root  
+gid = root  
+use chroot = no  
+max connections = 100  
+pid file = /var/...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">rsync</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">共享</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/09/30/rsync.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/09/12/tomcat-optimize.html" class="btn-link">
+                        <h2>
+                            tomcat配置优化参数
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 12 Sep 2015</span>
+                    </div>
+                    <p>
+                    	export LD_LIBRARY_PATH=/home/opt/tools/apr/lib
+JAVA_OPTS="-server -XX:PermSize=128M -XX:MaxPermSi...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">tomcat</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">优化</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/09/12/tomcat-optimize.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/09/11/tomcat-nginx-memcached-session.html" class="btn-link">
+                        <h2>
+                            tomcat + memcached + nginx 实现session共享
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 11 Sep 2015</span>
+                    </div>
+                    <p>
+                    	这里重点强调如何实现linux服务器上 服务器session共享，软件安装不再赘述。
+
+首先我们需要对 cookie 和session的工作机制非常了解，如果不了解其中的原理，就算配置成功，也毫...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">tomcat</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">memcached</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">nginx</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">session</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/09/11/tomcat-nginx-memcached-session.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/08/18/linux-memcached.html" class="btn-link">
+                        <h2>
+                            memcached源码安装、错误处理及启动参数
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 18 Aug 2015</span>
+                    </div>
+                    <p>
+                    	memcached服务安装：
+
+源码包：memcached-1.4.21.tar.gz
+
+依赖包：libevent-2.0.20-stable.tar.gz
+
+libevent是memcache...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">memcached</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/08/18/linux-memcached.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/07/22/cpu.html" class="btn-link">
+                        <h2>
+                            CPU使用率的计算方法
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 22 Jul 2015</span>
+                    </div>
+                    <p>
+                    	在Linux系统中，可以用/proc/stat文件来计算cpu的利用率。这个文件包含了所有CPU活动的信息，该文件中的所有值都是从系统启动开始累计到当前时刻。
+
+cat /proc/stat
+
+...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">CPU</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/07/22/cpu.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/05/09/lvs.html" class="btn-link">
+                        <h2>
+                            LVS三种工作模式脚本及比较
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 9 May 2015</span>
+                    </div>
+                    <p>
+                    	yum -y install ipvsadm
+modprobe -l|grep ipvs     ##检查ipvs的模块
+
+
+
+-g 表示使用DR方式，-m表示NAT方式，-i表示tunneli...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">LVS</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/05/09/lvs.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/03/12/linux-tomcat.html" class="btn-link">
+                        <h2>
+                            Apache tomcat在Linux上安装部署
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 12 Mar 2015</span>
+                    </div>
+                    <p>
+                    	tomcat是在java容器中运行的，首先需要下载jdk的Linux包，然后下载Apache tomcat的Linux包，这些在官网都能够下载到。
+
+jdk和tomcat
+
+java位置：
+ls...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">tomcat</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/03/12/linux-tomcat.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/03/03/nginx.html" class="btn-link">
+                        <h2>
+                            nginx源码安装及安全
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 3 Mar 2015</span>
+                    </div>
+                    <p>
+                    	nginx安装版本为nginx-1.6.2.tar.gz，这个版本为目前最新的稳定版。
+
+安装之前需要安装pcre插件包，插件包版本为：pcre-8.36.tar.gz
+还有zlib库和ssl，...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">nginx</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/03/03/nginx.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/03/02/shell.html" class="btn-link">
+                        <h2>
+                            ${}，##and%%在shell中的使用
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 2 Mar 2015</span>
+                    </div>
+                    <p>
+                    	为了完整起见，我用一些例子加以说明 ${ } 的一些特异功能：
+
+假设我们定义了一个变量为：file=/dir1/dir2/dir3/my.file.txt
+
+我们可以用 ${ } 分别替换获得...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">shell</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/03/02/shell.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/02/02/ssh-key.html" class="btn-link">
+                        <h2>
+                            ssh非root用户key认证登陆及忽略known_hosts
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 2 Feb 2015</span>
+                    </div>
+                    <p>
+                    	有些时候，我们不能使用root用户在正式环境服务器操作，此时可以使用普通用户，root用户的key认证登陆设置非常简单，普通用户的key认证登陆尝试好几次总算找到了原因，最终还是文件和文件夹权限...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">ssh</button>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">key</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/02/02/ssh-key.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/02/02/Top_command-VIRT-RES-SHR-DATA.html" class="btn-link">
+                        <h2>
+                            Top命令VIRT,RES,SHR,DATA的含义
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 2 Feb 2015</span>
+                    </div>
+                    <p>
+                    	VIRT：virtual memory usage
+
+
+  进程“需要的”虚拟内存大小，包括进程使用的库、代码、数据等
+  假如进程申请100m的内存，但实际只使用了10m，那么它会增长100m...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">top</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/02/02/Top_command-VIRT-RES-SHR-DATA.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+		
+		<li>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <a href="/linux/2015/01/13/linux-epel.html" class="btn-link">
+                        <h2>
+                            RHEL的EPEL源地址及安装
+                        </h2>
+                    </a>
+                    <div class="small m-b-xs">
+                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 13 Jan 2015</span>
+                    </div>
+                    <p>
+                    	RHEL6:
+
+[root@test ~]# rpm -ivh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-...
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5 style="display: inline;">Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">epel</button>
+                                
+                        </div>
+                        <div class="col-md-6">
+                            <div class="small text-right">
+                                <h5>Stats:</h5>
+                                <div> 
+                                
+                                
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/01/13/linux-epel.html">0</span> comments
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </li>
+        
+        </ul>
+        
+    <div class="col-lg-6 col-lg-offset-6">
+		<div class="pag-holder"></div>
+	</div>
+
+
+
+
+    </div>
+</div>
+
+
+	
+	    <script src="/static/js/scroll.js"></script>
+
+<!-- Baidu analytics -->
+
+
+<!-- Google analytics -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-73784599-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+
+  <script type="text/javascript">
+    var disqusShortName = "jalpc";
+
+    var disqusPublicKey = "tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7";
+
+    var urlArray = [];
+    $('.disqus-comment-count').each(function () {
+      var url = $(this).attr('data-disqus-url');
+      urlArray.push('link:' + url);
+    });
+    $.ajax({
+      type: 'GET',
+      url: "https://disqus.com/api/3.0/threads/set.jsonp",
+      data: { api_key: disqusPublicKey, forum : disqusShortName, thread : urlArray },
+      cache: false,
+      dataType: "jsonp",
+      success: function (result) {
+        for (var i in result.response) {
+          var count = result.response[i].posts;
+          if ( count ) {
+            $('.disqus-comment-count[data-disqus-url="' + result.response[i].link + '"]').html(count);
+          }
+        }
+      }
+    });
+</script>
+
+
+
+
+<script async src="/static/js/count_page.js"></script>
+
+	
+
+</body>
+</html>
