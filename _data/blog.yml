@@ -7,8 +7,8 @@
 - name: Linux
   href: '/linux/'
 
-- name: OpenCV
-  href: '/html/'
+- name: Computer Vision
+  href: '/computervision/'
 
 # - name: Database
 #   href: '/database/'
