@@ -7,12 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+    <meta content="Installing OpenCV on Ubuntu with Anaconda Python (which is usually a pain in the ass)" name="description">
+  
+  
+    <meta name="keywords" content="python,ubuntu,anaconda,opencv,linux">
   
   <meta name="author" content="rsnk">
 
   <title>
     
-        rsnk|Computer Vision
+        rsnk|OpenCV Installation on Anaconda Python in Linux
     
   </title>
   <!-- favicon -->
@@ -151,7 +155,7 @@
                             <a class="page-scroll" href="/linux/">Linux</a></li>
                         
                             
-                            <li class="active">
+                            <li>
                             
                             <a class="page-scroll" href="/computervision/">Computer Vision</a></li>
                         
@@ -204,34 +208,80 @@
 
 	
 
-        <div class="row">
-    <div class="col-lg-12 text-center">
-        <div class="navy-line"></div>
-        <h1>Computer Vision</h1>
-    </div>
-</div>
-
-<div class="wrapper wrapper-content  animated fadeInRight blog">
+    <div class="wrapper wrapper-content  animated fadeInRight article">
     <div class="row">
-		<ul id="pag-itemContainer" style="list-style:none;">
-    
-		
-		
-		<li>
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-lg-10 col-lg-offset-1">
             <div class="ibox">
                 <div class="ibox-content">
-                    <a href="/computervision/2016/08/25/computervision-opencv-complicated-install.html" class="btn-link">
-                        <h2>
-                            OpenCV Installation on Anaconda Python in Linux
-                        </h2>
-                    </a>
-                    <div class="small m-b-xs">
-                        <strong>rsnk</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 25 Aug 2016</span>
+                    <div class="pull-right">
+                    	
+                        	<button class="btn btn-white btn-xs" type="button">ComputerVision</button>
+                        
                     </div>
-                    <p>
-                    	Before you get started, you must know this, that even as of OpenCV3.1, documented support is ther...
-                    </p>
+                    <div class="text-center article-title">
+                    <span class="text-muted"><i class="fa fa-clock-o"></i> 25 Aug 2016</span>
+                        <h1>
+                            OpenCV Installation on Anaconda Python in Linux
+                        </h1>
+                    </div>
+                    	<p>Before you get started, you must know this, that even as of OpenCV3.1, documented support is there only for VTK5.1, which is compatible with QT4, and so, for all the scripts provided on this webpage, we will be using QT4, not QT5</p>
+
+<p>If directly using Python on Ubuntu, please refer to the other blog post on installing python for ubuntu directly</p>
+
+<p>If using Anaconda Python, you might face problems on building OpenCV. However, after a lot of attempts, I managed to get OpenCV3.1+contrib working on Ubuntu 16.04 with Anaconda Python 3. This is a brief guide to help you overcome the commonly occurring problems</p>
+
+<h3 id="note">NOTE:</h3>
+<p>If at any point of time, you are re-building with or without changed cmake parameters, then make sure you remove partial built files</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo rm -rf opencv/build/ opencv/CMakeLists.txt opencv/cmake/
+<span class="gp">$ </span><span class="nb">cd </span>opencv
+<span class="gp">$ </span>git reset --hard HEAD
+<span class="gp">$ </span><span class="nb">cd</span> ..
+</code></pre>
+</div>
+
+<p><br /></p>
+<h2 id="step-1-download-the-appropriate-scripts">Step 1: Download the appropriate scripts</h2>
+
+<p>In short, it will suffice if you download the following two scripts (preparatory and building), give the appropriate permissions with</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod 755 4<span class="se">\ </span>-<span class="se">\ </span>opencvPreReq.sh
+<span class="gp">$ </span>chmod 755 5<span class="se">\ </span>-<span class="se">\ </span>opencvInstall.sh 
+</code></pre>
+</div>
+<p>Place both the scripts in the parent folder of where you would like OpenCV to be installed</p>
+
+<p><br /></p>
+<h2 id="step-2-prepare-the-concoction">Step 2: Prepare the concoction</h2>
+<p>Run the preparatory file first</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>./4<span class="se">\ </span>-<span class="se">\ </span>opencvPreReq.sh
+</code></pre>
+</div>
+<p>Now, before running the actual building script, note that you MUST have anaconda removed from the environment PATH variable as otherwise, it detects a partial Conda-compliant version of QT5, which will lead to the final built openCV being unusable. Most likely, conda will be added to your shell starting code (.bashrc or .zshrc, for instance). After you have done that,</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>./5<span class="se">\ </span>-<span class="se">\ </span>opencvInstall.sh
+</code></pre>
+</div>
+<p><br /></p>
+<h2 id="step-3-configuring-cmake-using-ccmake">Step 3: Configuring CMAKE using CCMAKE</h2>
+
+<p>After the initial configuration, a ccmake prompt will come up, which lets you change the cmake parameters. As you have removed Anaconda Python from your PATH variable, it will not be detected by CMAKE. Hence, you have to manually input the location of your python variables (REFER: Images below. Replace /home/rsnk96/anaconda3 with your installation path). Press enter, and finish the building</p>
+
+<!--![instructions-1](/static/img/blog/opencv-anaconda-install/opencv Anaconda Install.png)-->
+<p><img src="/static/img/blog/opencv-anaconda-install/opencv Anaconda Install.png" alt="instructions1" style="width: 1000px" />
+<br />
+<br />
+<img src="/static/img/blog/opencv-anaconda-install/opencv Anaconda Install-2.png" alt="instructions2" style="width: 1000px" /></p>
+
+<p>You might additionally face the problem of mismatched libtiff when building. If that is the case, remove libtiff from your system, use conda remove to remove libtiff from all your anaconda environments, and then run the shell script, which will build libtiff by itself</p>
+
+<p><br /></p>
+<h2 id="step-4-make-and-install">Step 4: Make and Install</h2>
+
+<p>Aaah you really don’t have to do anything after this. Just let the script do its job :-D</p>
+
+<p><br />
+<br />
+If you face any problem not mentioned here, feel free to ping me :-)</p>
+
+                    <hr>
                     <div class="row">
                         <div class="col-md-6">
                                 <h5 style="display: inline;">Tags:</h5>
@@ -259,17 +309,56 @@
                             </div>
                         </div>
                     </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- donate -->
+                            
+                            <br>
+                            <!-- share -->
+                            
+                                <h2>Share:</h2>
+
+<div class="bshare-custom">
+	<a title="分享到微信" class="bshare-weixin"></a>
+	<a title="分享到QQ空间" class="bshare-qzone"></a>
+	<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+	<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+</div>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=513f778e-a8f7-4c20-9ec2-d29cc2328d75&amp;pophcol=1&amp;lang=zh"></script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                            
+                            <br>
+                            <!-- comment -->
+                            
+
+
+<div id="disqus_thread"></div>
+<script>
+/** * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS. * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+	/*
+	var disqus_config = function () { this.page.url = PAGE_URL;
+	// Replace PAGE_URL with your page's canonical URL variable this.page.identifier = PAGE_IDENTIFIER;
+	// Replace PAGE_IDENTIFIER with your page's unique identifier variable };
+	*/
+	(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = '//jalpc.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-        </li>
-        
-        </ul>
-        
-
-
-
     </div>
+
 </div>
 
 

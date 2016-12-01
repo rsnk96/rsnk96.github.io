@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://localhost:4000/linux/2015/01/12/opencv-install_simple.html</loc>
+        <loc>https://rsnk96.github.io/computervision/2016/08/25/computervision-opencv-complicated-install.html</loc>
     </url>
 
 
     <url>
-        <loc>http://localhost:4000/404.html</loc>
+        <loc>https://rsnk96.github.io/404.html</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/blog/</loc>
+        <loc>https://rsnk96.github.io/blog/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/search/cb-search.json</loc>
+        <loc>https://rsnk96.github.io/search/cb-search.json</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/computervision/</loc>
+        <loc>https://rsnk96.github.io/computervision/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/feed.xml</loc>
+        <loc>https://rsnk96.github.io/feed.xml</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/</loc>
+        <loc>https://rsnk96.github.io/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/life/</loc>
+        <loc>https://rsnk96.github.io/life/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/linux/</loc>
+        <loc>https://rsnk96.github.io/linux/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/python/</loc>
+        <loc>https://rsnk96.github.io/python/</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/robots.txt</loc>
+        <loc>https://rsnk96.github.io/robots.txt</loc>
     </url>
 
     <url>
-        <loc>http://localhost:4000/sitemap.xml</loc>
+        <loc>https://rsnk96.github.io/sitemap.xml</loc>
     </url>
 
 </urlset>
