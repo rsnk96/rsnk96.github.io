@@ -18,7 +18,7 @@ If using Anaconda Python, you might face problems on building OpenCV. However, a
 
 ### NOTE:
 If at any point of time, you are re-building with or without changed cmake parameters, then make sure you remove partial built files
-```bash
+```
 $ sudo rm -rf opencv/build/ opencv/CMakeLists.txt opencv/cmake/
 $ cd opencv
 $ git reset --hard HEAD
@@ -29,7 +29,7 @@ $ cd ..
 ## Step 1: Download the appropriate scripts
 
 In short, it will suffice if you download the following two scripts (preparatory and building), give the appropriate permissions with
-```bash
+```
 $ chmod 755 4\ -\ opencvPreReq.sh
 $ chmod 755 5\ -\ opencvInstall.sh 
 ```
@@ -39,11 +39,11 @@ Place both the scripts in the parent folder of where you would like OpenCV to be
 <br>
 ## Step 2: Prepare the concoction
 Run the preparatory file first
-```bash
+```
 $ ./4\ -\ opencvPreReq.sh
 ```
 Now, before running the actual building script, note that you MUST have anaconda removed from the environment PATH variable as otherwise, it detects a partial Conda-compliant version of QT5, which will lead to the final built openCV being unusable. Most likely, conda will be added to your shell starting code (.bashrc or .zshrc, for instance). After you have done that, 
-```bash
+```
 $ ./5\ -\ opencvInstall.sh
 ```
 <br>
