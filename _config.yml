@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "Nikhil's e-Crib"
+title: "rsnk"
 description: "rsnk's blog?'"
 keywords: "rsnk, rsnk96,Jalpc,blog,Jekyll,github,Nikhil"
 baseurl: "/"
@@ -16,7 +16,7 @@ author:
   facebook_username: 'rsnk96'
   github_username: 'rsnk96'
   head_img: 'static/img/landing/dp.jpg'
-  desc: 'I am a Undergraduate student at IIT Madras. I sleep by the day, and program by the night. Because you either die a programmer, or live long enough to be the programmed. My other interests include gaming, numismatics, and collecting coins'
+  desc: 'Why do I do what I do? Because "you either die a programmer, or live long enough to be the programmed". I am an undergraduate student at IIT Madras, programmer, numismatist, Music Lover (❤) and gamer.'
 
 # sections
 sections:
@@ -57,10 +57,10 @@ sections:
     css: 'contact'
 
 # localization
-languages:
-  - locale: 'en'
-    flag: 'static/img/flags/United-States.png'
-  # - locale: 'zh'
+# languages:
+#   - locale: 'en'
+#     flag: 'static/img/flags/United-States.png'
+#   # - locale: 'zh'
   #   flag: 'static/img/flags/China.png'
 
 # blog img path

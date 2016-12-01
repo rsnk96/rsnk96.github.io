@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <meta content="MySQL查看表大小" name="description">
+    <meta content="Bhel maxa" name="description">
   
   
-    <meta name="keywords" content="Linux,MySQL,table,size">
+    <meta name="keywords" content="rhel,epel,rpm,linux">
   
   <meta name="author" content="rsnk">
 
   <title>
     
-        Nikhil's e-Crib|MySQL查看表大小
+        rsnk|Bhel Test BC
     
   </title>
   <!-- favicon -->
@@ -133,7 +133,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Nikhil's e-Crib</a>
+                    <a class="navbar-brand" href="/">rsnk</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -157,22 +157,12 @@
                             
                             <li>
                             
-                            <a class="page-scroll" href="/html/">HTML</a></li>
+                            <a class="page-scroll" href="/html/">OpenCV</a></li>
                         
                             
                             <li>
                             
-                            <a class="page-scroll" href="/database/">Database</a></li>
-                        
-                            
-                            <li>
-                            
-                            <a class="page-scroll" href="/mac/">Mac</a></li>
-                        
-                            
-                            <li>
-                            
-                            <a class="page-scroll" href="/life/">Life</a></li>
+                            <a class="page-scroll" href="">Life</a></li>
                         
                     </ul>
                 </div>
@@ -225,38 +215,37 @@
                 <div class="ibox-content">
                     <div class="pull-right">
                     	
-                        	<button class="btn btn-white btn-xs" type="button">Database</button>
+                        	<button class="btn btn-white btn-xs" type="button">Linux</button>
                         
                     </div>
                     <div class="text-center article-title">
-                    <span class="text-muted"><i class="fa fa-clock-o"></i> 1 Nov 2015</span>
+                    <span class="text-muted"><i class="fa fa-clock-o"></i> 12 Jan 2015</span>
                         <h1>
-                            MySQL查看表大小
+                            Bhel Test BC
                         </h1>
                     </div>
-                    	<p>方法一：</p>
+                    	<p>bhelpuri:</p>
 
-<p>在MySQL的data目录下查看，前提是my.cnf中配置了innodb_file_per_table</p>
-
-<p>方法二：</p>
-
-<p>在MySQL查询中执行以下操作：</p>
-
-<div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">select</span> <span class="k">table_name</span><span class="p">,</span><span class="n">concat</span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">data_length</span><span class="o">/</span><span class="mi">1000</span><span class="o">/</span><span class="mi">1000</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s1">'GB'</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_length_GB</span> 
-<span class="k">from</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">data_length_GB</span><span class="p">;</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">panipuri</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'yolo'</span><span class="p">)</span>
 </code></pre>
 </div>
+
+<p>RHEL5:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[root@test ~]# rpm -ivh http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm
+[root@test ~]# rpm -ivh  http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm
+</code></pre>
+</div>
+
+<p>EPEL版本不同，根据不同系统请自行安装。</p>
 
                     <hr>
                     <div class="row">
                         <div class="col-md-6">
                                 <h5 style="display: inline;">Tags:</h5>
                                 
-                                    <button class="btn btn-white btn-xs" type="button">MySQL</button>
-                                
-                                    <button class="btn btn-white btn-xs" type="button">table</button>
-                                
-                                    <button class="btn btn-white btn-xs" type="button">大小</button>
+                                    <button class="btn btn-white btn-xs" type="button">bhel</button>
                                 
                         </div>
                         <div class="col-md-6">
@@ -265,7 +254,7 @@
                                 <div> 
                                 
                                 
-                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/database/2015/11/01/mysql-table-size.html">0</span> comments
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="http://localhost:4000/linux/2015/01/12/opencv-install_simple.html">0</span> comments
                                 
                                 </div>
                             </div>

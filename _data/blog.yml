@@ -7,14 +7,14 @@
 - name: Linux
   href: '/linux/'
 
-- name: HTML
+- name: OpenCV
   href: '/html/'
 
-- name: Database
-  href: '/database/'
+# - name: Database
+#   href: '/database/'
 
-- name: Mac
-  href: '/mac/'
+# - name: Mac
+#   href: '/mac/'
 
 - name: Life
-  href: '/life/'
+  href: #'/life/'
