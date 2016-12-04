@@ -232,6 +232,7 @@
 
 <h3 id="note">NOTE:</h3>
 <p>If at any point of time, you are re-building with or without changed cmake parameters, then make sure you remove partial built files</p>
+
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo rm -rf opencv/build/ opencv/CMakeLists.txt opencv/cmake/
 <span class="gp">$ </span><span class="nb">cd </span>opencv
 <span class="gp">$ </span>git reset --hard HEAD
@@ -243,22 +244,28 @@
 <h2 id="step-1-download-the-appropriate-scripts">Step 1: Download the appropriate scripts</h2>
 
 <p>In short, it will suffice if you download the following two scripts (preparatory and building), give the appropriate permissions with</p>
+
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod 755 4<span class="se">\ </span>-<span class="se">\ </span>opencvPreReq.sh
 <span class="gp">$ </span>chmod 755 5<span class="se">\ </span>-<span class="se">\ </span>opencvInstall.sh 
 </code></pre>
 </div>
+
 <p>Place both the scripts in the parent folder of where you would like OpenCV to be installed</p>
 
 <p><br /></p>
 <h2 id="step-2-prepare-the-concoction">Step 2: Prepare the concoction</h2>
 <p>Run the preparatory file first</p>
+
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>./4<span class="se">\ </span>-<span class="se">\ </span>opencvPreReq.sh
 </code></pre>
 </div>
+
 <p>Now, before running the actual building script, note that you MUST have anaconda removed from the environment PATH variable as otherwise, it detects a partial Conda-compliant version of QT5, which will lead to the final built openCV being unusable. Most likely, conda will be added to your shell starting code (.bashrc or .zshrc, for instance). After you have done that,</p>
+
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>./5<span class="se">\ </span>-<span class="se">\ </span>opencvInstall.sh
 </code></pre>
 </div>
+
 <p><br /></p>
 <h2 id="step-3-configuring-cmake-using-ccmake">Step 3: Configuring CMAKE using CCMAKE</h2>
 

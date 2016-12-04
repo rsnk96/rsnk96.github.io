@@ -5,8 +5,8 @@
     <description>rsnk's blog?'</description>
     <link>https://rsnk96.github.io//</link>
     <atom:link href="https://rsnk96.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Dec 2016 00:38:39 +0530</pubDate>
-    <lastBuildDate>Fri, 02 Dec 2016 00:38:39 +0530</lastBuildDate>
+    <pubDate>Sun, 04 Dec 2016 23:44:59 +0530</pubDate>
+    <lastBuildDate>Sun, 04 Dec 2016 23:44:59 +0530</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -19,6 +19,7 @@
 
 &lt;h3 id=&quot;note&quot;&gt;NOTE:&lt;/h3&gt;
 &lt;p&gt;If at any point of time, you are re-building with or without changed cmake parameters, then make sure you remove partial built files&lt;/p&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo rm -rf opencv/build/ opencv/CMakeLists.txt opencv/cmake/
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;opencv
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git reset --hard HEAD
@@ -30,22 +31,28 @@
 &lt;h2 id=&quot;step-1-download-the-appropriate-scripts&quot;&gt;Step 1: Download the appropriate scripts&lt;/h2&gt;
 
 &lt;p&gt;In short, it will suffice if you download the following two scripts (preparatory and building), give the appropriate permissions with&lt;/p&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod 755 4&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvPreReq.sh
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod 755 5&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvInstall.sh 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;Place both the scripts in the parent folder of where you would like OpenCV to be installed&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;step-2-prepare-the-concoction&quot;&gt;Step 2: Prepare the concoction&lt;/h2&gt;
 &lt;p&gt;Run the preparatory file first&lt;/p&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./4&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvPreReq.sh
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;Now, before running the actual building script, note that you MUST have anaconda removed from the environment PATH variable as otherwise, it detects a partial Conda-compliant version of QT5, which will lead to the final built openCV being unusable. Most likely, conda will be added to your shell starting code (.bashrc or .zshrc, for instance). After you have done that,&lt;/p&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./5&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvInstall.sh
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;step-3-configuring-cmake-using-ccmake&quot;&gt;Step 3: Configuring CMAKE using CCMAKE&lt;/h2&gt;
 
