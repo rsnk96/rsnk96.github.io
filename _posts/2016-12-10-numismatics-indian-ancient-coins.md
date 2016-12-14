@@ -36,7 +36,6 @@ The ancient Indian coins are the favourite part of my collection. The transition
 <br>There are a lot more interesting events we can infer from the Princely State Coins of my collection, but I'll let you discover that yourself :)
 
 Thanks to the many people who have contributed to this collection. I love collecting coins and if you are an enthusiast too, I'll gladly trade 
-And if you come across coins that you see no worth for in today's world, or that you do not know what to do with, it'll be my pleasure to mitigate your worries and take them away :-)
 
 And finally, the coins might be ordered in a haphazard manner below. That is because it is tabulated the way I have stored them in my collection.
 Do note that their documentation is not complete
