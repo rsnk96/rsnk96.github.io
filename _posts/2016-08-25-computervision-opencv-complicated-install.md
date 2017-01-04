@@ -27,6 +27,7 @@ $ cd ..
 ```
 
 <br>
+
 ## Step 1: Download the appropriate scripts
 
 In short, it will suffice if you download the following two scripts (preparatory and building), give the appropriate permissions with
@@ -40,6 +41,7 @@ Place both the scripts in the parent folder of where you would like OpenCV to be
 
 
 <br>
+
 ## Step 2: Prepare the concoction
 Run the preparatory file first
 
@@ -54,6 +56,7 @@ $ ./5\ -\ opencvInstall.sh
 ```
 
 <br>
+
 ## Step 3: Configuring CMAKE using CCMAKE
 
 After the initial configuration, a ccmake prompt will come up, which lets you change the cmake parameters. As you have removed Anaconda Python from your PATH variable, it will not be detected by CMAKE. Hence, you have to manually input the location of your python variables (REFER: Images below. Replace /home/rsnk96/anaconda3 with your installation path). Press enter, and finish the building
@@ -67,9 +70,17 @@ After the initial configuration, a ccmake prompt will come up, which lets you ch
 You might additionally face the problem of mismatched libtiff when building. If that is the case, remove libtiff from your system, use conda remove to remove libtiff from all your anaconda environments, and then run the shell script, which will build libtiff by itself
 
 <br>
+
 ## Step 4: Make and Install
 
 Aaah you really don't have to do anything after this. Just let the script do its job :-D
+
+<br>
+
+## Notes
+
+* If you face the error `fatal error: ft2build.h: No such file or directory`, it is most likely because you have freetype enabled in contrib. Disable it using ` -DBUILD_opencv_freetype=OFF ..`
+
 
 <br>
 <br>
