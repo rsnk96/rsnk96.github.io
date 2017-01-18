@@ -152,3 +152,6 @@ changes the timestamp of the file. Used to create new file
     cat "$in" |grep -i "africA" >> "$output"
     echo "Completed"
     ```
+
+# Open any file with default application from terminal
+Simple use `eog`. Ex: `eog as.jpg` will open `as.jpg` with your default image viewer
