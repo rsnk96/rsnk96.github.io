@@ -142,16 +142,16 @@ changes the timestamp of the file. Used to create new file
 * `$1`: First argument. `$2`: Second argument
 * While accessing any variables in a bash script, you have to enclose them within quotes. Ex:
 
-    ```
-    #!/bin/bash
-    in="$1"
-    output = "$2"
-    # printing united cities
-    cat "$in" |grep -i "united" > "$output"
-    echo "printed united"
-    cat "$in" |grep -i "africA" >> "$output"
-    echo "Completed"
-    ```
+```bash
+#!/bin/bash
+in="$1"
+output = "$2"
+# printing united cities
+cat "$in" |grep -i "united" > "$output"
+echo "printed united"
+cat "$in" |grep -i "africA" >> "$output"
+echo "Completed"
+```
 
 # Open any file with default application from terminal
 Simple use `eog`. Ex: `eog as.jpg` will open `as.jpg` with your default image viewer
