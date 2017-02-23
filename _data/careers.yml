@@ -5,10 +5,10 @@
     detail: Detect Technologies
     i18n: detect
   desc:
-    detail: In Detect Technologies, I am a Lead Engineer in Computer Vision, and also a software developer in Python
+    detail: In Detect Technologies, I led the Computer Vision Section and developed software for Analysis of videos captured from a drone
     i18n: detect_des
   date:
-    detail: Present
+    detail: Dec 2016
     i18n: detect_date
   job:
     detail: Computer Vision and Software Developer

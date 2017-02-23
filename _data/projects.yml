@@ -1,8 +1,8 @@
-# - name: 'Saplatform'
-#   i18n: 'saplatform'
-#   url: '/Jack614/saplatform'
-#   img: 'static/img/landing/saplatform.png'
-#   desc: 'Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.'
+- name: 'Thompson Sampling on Disentangled Latent Variables with Linear Models'
+  i18n: 'thompsonDisent'
+  url: #'https://github.com/san25dec/VAE'
+  img: 'static/img/landing/disent.jpg'
+  desc: "Visual Concept Learning to learn disentangled representations of certain state-spaces, and using this to build a complete dynamics model of a game"
 
 - name: 'Intelligent Ground Vehicle'
   i18n: 'igv'
@@ -12,13 +12,13 @@
 
 - name: 'Org-E'
   i18n: 'orge'
-  url: #'/Jack614/jalpc_jekyll_theme'
+  url: 'https://github.com/rsnk96/org-e'
   img: 'static/img/landing/org_e.PNG'
   desc: "I undertook Org-E as a project to build a solution to the clutter we buildin our digital life. It organizes files into folders based on type, and optionally rearranges the existing folders and the relocation of files too"
 
 - name: 'Interactive Distortion Correcter'
   i18n: 'distCorrect'
-  url: #'/Jack614/Jalpc-A'
+  url: 'https://github.com/rsnk96/Interactive-Distortion-Corrector'
   img: 'static/img/landing/distCorrect.jpg'
   desc: "Finding the right value of the squared and fourth order coefficient for Brownian radial distortion correction can be a pain in the ass. This project was aimed at easing that process and helping you easily find the coefficient for a given image"
 

@@ -5,9 +5,101 @@
     <description>rsnk's blog?'</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Jan 2017 00:55:18 +0530</pubDate>
-    <lastBuildDate>Tue, 17 Jan 2017 00:55:18 +0530</lastBuildDate>
-    <generator>Jekyll v3.3.1</generator>
+    <pubDate>Thu, 23 Feb 2017 19:50:50 +0530</pubDate>
+    <lastBuildDate>Thu, 23 Feb 2017 19:50:50 +0530</lastBuildDate>
+    <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Updated OpenCV Installation in Linux (Anaconda / Default Python)</title>
+        <description>&lt;p&gt;In my earlier blog posts, I talk about adopting different methods for installing OpenCV if you use Anaconda Python. Well, I was an idiot, because I was just providing a jugaad solution. Turns out you can have a unified solution, and that is exactly what I have done &lt;a href=&quot;https://github.com/rsnk96/Ubuntu-Setup-Scripts/blob/master/opencvDirectInstall.sh&quot;&gt;here&lt;/a&gt;. Use that link if you quickly want to get around knowing how it works, or if you’re simply too lazy.&lt;/p&gt;
+
+&lt;p&gt;If at any point of time, you are re-building with or without changed cmake parameters, then make sure you remove partial built files&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo rm -rf opencv/build/ opencv/CMakeLists.txt opencv/cmake/
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;opencv
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git reset --hard HEAD
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-1-download-the-appropriate-scripts&quot;&gt;Step 1: Download the appropriate scripts&lt;/h2&gt;
+
+&lt;p&gt;In short, it will suffice if you download the following two scripts (preparatory and building), give the appropriate permissions with&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod 755 4&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvPreReq.sh
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod 755 5&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvInstall.sh 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Place both the scripts in the parent folder of where you would like OpenCV to be installed&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-prepare-the-concoction&quot;&gt;Step 2: Prepare the concoction&lt;/h2&gt;
+&lt;p&gt;Run the preparatory file first&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./4&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvPreReq.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, before running the actual building script, note that you MUST have anaconda removed from the environment PATH variable as otherwise, it detects a partial Conda-compliant version of QT5, which will lead to the final built openCV being unusable. Most likely, conda will be added to your shell starting code (.bashrc or .zshrc, for instance). After you have done that,&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./5&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvInstall.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-configuring-cmake-using-ccmake&quot;&gt;Step 3: Configuring CMAKE using CCMAKE&lt;/h2&gt;
+
+&lt;p&gt;After the initial configuration, a ccmake prompt will come up, which lets you change the cmake parameters. As you have removed Anaconda Python from your PATH variable, it will not be detected by CMAKE. Hence, you have to manually input the location of your python variables (REFER: Images below. Replace /home/rsnk96/anaconda3 with your installation path). Press enter, and finish the building&lt;/p&gt;
+
+&lt;!--![instructions-1](/static/img/blog/opencv-anaconda-install/opencv Anaconda Install.png)--&gt;
+&lt;p&gt;&lt;img src=&quot;/static/img/blog/opencv-anaconda-install/opencv Anaconda Install.png&quot; alt=&quot;instructions1&quot; style=&quot;width: 1000px&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/static/img/blog/opencv-anaconda-install/opencv Anaconda Install-2.png&quot; alt=&quot;instructions2&quot; style=&quot;width: 1000px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You might additionally face the problem of mismatched libtiff when building. If that is the case, remove libtiff from your system, use conda remove to remove libtiff from all your anaconda environments, and then run the shell script, which will build libtiff by itself&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-make-and-install&quot;&gt;Step 4: Make and Install&lt;/h2&gt;
+
+&lt;p&gt;Aaah you really don’t have to do anything after this. Just let the script do its job :-D&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you face the error &lt;code class=&quot;highlighter-rouge&quot;&gt;fatal error: ft2build.h: No such file or directory&lt;/code&gt;, it is most likely because you have freetype enabled in contrib. Disable it using ` -DBUILD_opencv_freetype=OFF ..`&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+If you face any problem not mentioned here, feel free to ping me :-)&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Feb 2017 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000//computervision/2017/02/23/computervision-opencv-full-install.html</link>
+        <guid isPermaLink="true">http://localhost:4000//computervision/2017/02/23/computervision-opencv-full-install.html</guid>
+        
+        <category>ComputerVision</category>
+        
+        <category>OpenCV</category>
+        
+        <category>Python</category>
+        
+        <category>Linux</category>
+        
+        <category>Anaconda</category>
+        
+        
+        <category>ComputerVision</category>
+        
+      </item>
     
       <item>
         <title>Linux Commands for an intermediate level user</title>
@@ -204,21 +296,22 @@ Have Fun!&lt;/p&gt;
   &lt;li&gt;Start with &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Execute commands sequentially&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$1&lt;/code&gt;: First argument. &lt;code class=&quot;highlighter-rouge&quot;&gt;$2&lt;/code&gt;: Second argument&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;While accessing any variables in a bash script, you have to enclose them within quotes. Ex:&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-  output &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-  &lt;span class=&quot;c&quot;&gt;# printing united cities&lt;/span&gt;
-  cat &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$in&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; |grep -i &lt;span class=&quot;s2&quot;&gt;&quot;united&quot;&lt;/span&gt; &amp;gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;printed united&quot;&lt;/span&gt;
-  cat &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$in&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; |grep -i &lt;span class=&quot;s2&quot;&gt;&quot;africA&quot;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Completed&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
+  &lt;li&gt;While accessing any variables in a bash script, you have to enclose them within quotes. Ex:&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+output &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# printing united cities&lt;/span&gt;
+cat &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$in&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; |grep -i &lt;span class=&quot;s2&quot;&gt;&quot;united&quot;&lt;/span&gt; &amp;gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;printed united&quot;&lt;/span&gt;
+cat &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$in&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; |grep -i &lt;span class=&quot;s2&quot;&gt;&quot;africA&quot;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$output&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Completed&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;open-any-file-with-default-application-from-terminal&quot;&gt;Open any file with default application from terminal&lt;/h1&gt;
+&lt;p&gt;Simple use &lt;code class=&quot;highlighter-rouge&quot;&gt;eog&lt;/code&gt;. Ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;eog as.jpg&lt;/code&gt; will open &lt;code class=&quot;highlighter-rouge&quot;&gt;as.jpg&lt;/code&gt; with your default image viewer&lt;/p&gt;
 </description>
         <pubDate>Tue, 17 Jan 2017 00:00:00 +0530</pubDate>
         <link>http://localhost:4000//linux/2017/01/17/linux-linux-tricks.html</link>
@@ -2495,7 +2588,10 @@ Do note that their documentation is not complete. The images for my entire colle
     
       <item>
         <title>OpenCV Installation on Anaconda Python in Linux</title>
-        <description>&lt;p&gt;Before you get started, you must know this, that even as of OpenCV3.1, documented support is there only for VTK5.1, which is compatible with QT4, and so, for all the scripts provided on this webpage, we will be using QT4, not QT5&lt;/p&gt;
+        <description>&lt;h2 id=&quot;update&quot;&gt;Update:&lt;/h2&gt;
+&lt;p&gt;There is an improved and better blog post on installing OpenCV &lt;a href=&quot;https://rsnk96.github.io/computervision/2017/02/23/computervision-opencv-full-install.html&quot;&gt;here&lt;/a&gt; on Ubuntu which will work regardless of whether you have Anaconda Python as your default Python or not. Please refer to that. I am leaving this post online purely in the interest of seeing the approach with which I had tackled the problem earlier&lt;/p&gt;
+
+&lt;p&gt;Before you get started, you must know this, that even as of OpenCV3.1, documented support is there only for VTK5.1, which is compatible with QT4, and so, for all the scripts provided on this webpage, we will be using QT4, not QT5&lt;/p&gt;
 
 &lt;p&gt;If directly using Python on Ubuntu, please refer to the other blog post on installing python for ubuntu directly&lt;/p&gt;
 

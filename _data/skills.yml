@@ -1,4 +1,4 @@
-- name: Python
+- name: Python (+TF+Numpy)
   percentage: 85
 
 - name: C++
@@ -18,3 +18,6 @@
 
 - name: Photoshop / Illustrator
   percentage: 70
+
+- name: Torch (+Lua)
+  percentage: 65

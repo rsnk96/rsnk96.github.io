@@ -406,21 +406,22 @@ Have Fun!</p>
   <li>Start with <code class="highlighter-rouge"><span class="c">#!/bin/bash</span></code></li>
   <li>Execute commands sequentially</li>
   <li><code class="highlighter-rouge">$1</code>: First argument. <code class="highlighter-rouge">$2</code>: Second argument</li>
-  <li>
-    <p>While accessing any variables in a bash script, you have to enclose them within quotes. Ex:</p>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code>  <span class="c">#!/bin/bash</span>
-  <span class="k">in</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
-  output <span class="o">=</span> <span class="s2">"</span><span class="nv">$2</span><span class="s2">"</span>
-  <span class="c"># printing united cities</span>
-  cat <span class="s2">"</span><span class="nv">$in</span><span class="s2">"</span> |grep -i <span class="s2">"united"</span> &gt; <span class="s2">"</span><span class="nv">$output</span><span class="s2">"</span>
-  <span class="nb">echo</span> <span class="s2">"printed united"</span>
-  cat <span class="s2">"</span><span class="nv">$in</span><span class="s2">"</span> |grep -i <span class="s2">"africA"</span> &gt;&gt; <span class="s2">"</span><span class="nv">$output</span><span class="s2">"</span>
-  <span class="nb">echo</span> <span class="s2">"Completed"</span>
-</code></pre>
-    </div>
-  </li>
+  <li>While accessing any variables in a bash script, you have to enclose them within quotes. Ex:</li>
 </ul>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="k">in</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+output <span class="o">=</span> <span class="s2">"</span><span class="nv">$2</span><span class="s2">"</span>
+<span class="c"># printing united cities</span>
+cat <span class="s2">"</span><span class="nv">$in</span><span class="s2">"</span> |grep -i <span class="s2">"united"</span> &gt; <span class="s2">"</span><span class="nv">$output</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"printed united"</span>
+cat <span class="s2">"</span><span class="nv">$in</span><span class="s2">"</span> |grep -i <span class="s2">"africA"</span> &gt;&gt; <span class="s2">"</span><span class="nv">$output</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"Completed"</span>
+</code></pre>
+</div>
+
+<h1 id="open-any-file-with-default-application-from-terminal">Open any file with default application from terminal</h1>
+<p>Simple use <code class="highlighter-rouge">eog</code>. Ex: <code class="highlighter-rouge">eog as.jpg</code> will open <code class="highlighter-rouge">as.jpg</code> with your default image viewer</p>
 
                     <hr>
                     <div class="row">

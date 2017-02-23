@@ -9,6 +9,9 @@ tags: [ComputerVision,OpenCV,Python,Linux,Anaconda]
 icon: icon-centos
 ---
 
+## Update:
+There is an improved and better blog post on installing OpenCV [here](https://rsnk96.github.io/computervision/2017/02/23/computervision-opencv-full-install.html) on Ubuntu which will work regardless of whether you have Anaconda Python as your default Python or not. Please refer to that. I am leaving this post online purely in the interest of seeing the approach with which I had tackled the problem earlier
+
 Before you get started, you must know this, that even as of OpenCV3.1, documented support is there only for VTK5.1, which is compatible with QT4, and so, for all the scripts provided on this webpage, we will be using QT4, not QT5
 
 If directly using Python on Ubuntu, please refer to the other blog post on installing python for ubuntu directly
