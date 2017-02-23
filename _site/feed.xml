@@ -5,13 +5,17 @@
     <description>rsnk's blog?'</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Feb 2017 19:50:50 +0530</pubDate>
-    <lastBuildDate>Thu, 23 Feb 2017 19:50:50 +0530</lastBuildDate>
+    <pubDate>Fri, 24 Feb 2017 00:34:56 +0530</pubDate>
+    <lastBuildDate>Fri, 24 Feb 2017 00:34:56 +0530</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>Updated OpenCV Installation in Linux (Anaconda / Default Python)</title>
+        <title>OpenCV Installation in Linux (Anaconda / Default Python) {Updated}</title>
         <description>&lt;p&gt;In my earlier blog posts, I talk about adopting different methods for installing OpenCV if you use Anaconda Python. Well, I was an idiot, because I was just providing a jugaad solution. Turns out you can have a unified solution, and that is exactly what I have done &lt;a href=&quot;https://github.com/rsnk96/Ubuntu-Setup-Scripts/blob/master/opencvDirectInstall.sh&quot;&gt;here&lt;/a&gt;. Use that link if you quickly want to get around knowing how it works, or if you’re simply too lazy.&lt;/p&gt;
+
+&lt;p&gt;This blog post explains what I have done to build a unified installation script.&lt;/p&gt;
+
+&lt;h2 id=&quot;note&quot;&gt;NOTE:&lt;/h2&gt;
 
 &lt;p&gt;If at any point of time, you are re-building with or without changed cmake parameters, then make sure you remove partial built files&lt;/p&gt;
 
@@ -24,63 +28,69 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;step-1-download-the-appropriate-scripts&quot;&gt;Step 1: Download the appropriate scripts&lt;/h2&gt;
+&lt;h2 id=&quot;step-1-install-the-dependencies&quot;&gt;Step 1: Install the dependencies&lt;/h2&gt;
 
-&lt;p&gt;In short, it will suffice if you download the following two scripts (preparatory and building), give the appropriate permissions with&lt;/p&gt;
+&lt;p&gt;Well, the first step towards having a complete installation is obviously to install the required dependencies. This is exactly what about a third of the code does&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod 755 4&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvPreReq.sh
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod 755 5&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvInstall.sh 
+&lt;p&gt;It installs libraries that would enable you to harness the full functionality of OpenCV (excluding a few modules in contrib like SFM and Kinect Support).&lt;/p&gt;
+
+&lt;p&gt;If Anaconda Python is not installed, then we install numpy, scipy and matplotlib for Python 2 and 3 using the Ubuntu software centre. If it is, then we simply check if they are installed using pip directly&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-download-the-opencv-and-opencv-contrib-source-code&quot;&gt;Step 2: Download the OpenCV and OpenCV Contrib Source code&lt;/h2&gt;
+
+&lt;p&gt;It first checks if the folder already exists (in case you have partially run the script in the past). If not, it firsts changes your git buffer size (as the opencv repo size might be bigger than the default maximum git buffer size), and then clones both the source code repos. In case the folder already exists, it simply updates updates by pulling the latest changes from the repository&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-extracting-necessary-python-program-parameters&quot;&gt;Step 3: Extracting necessary Python program parameters&lt;/h2&gt;
+
+&lt;p&gt;The main cause of conflict / issue when you have Anaconda Python installed is the fact that Anaconda has a malformed MKL library and it’s own versions of lots of other libraries, which the OpenCV cmake detects, and uses to override the default full version of the library that exists in your system. To prevent that, we need to remove Anaconda from the &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt; variable, so that it is not detected at all by CMAKE. However, this would mean that Anaconda Python will also not be detected. Hence, we find the all the Python directories needed by CMAKE before hand, and then remove all traces of Anaconda from the path using&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; | tr &lt;span class=&quot;s1&quot;&gt;':'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'\n'&lt;/span&gt; | grep -v &lt;span class=&quot;s2&quot;&gt;&quot;conda[2-9]&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\?&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; | uniq | tr &lt;span class=&quot;s1&quot;&gt;'\n'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;':'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Place both the scripts in the parent folder of where you would like OpenCV to be installed&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: If you do not have Anaconda Python, this will still work perfectly alright&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;step-4-cmake-parameters&quot;&gt;Step 4: CMAKE parameters&lt;/h2&gt;
 
-&lt;h2 id=&quot;step-2-prepare-the-concoction&quot;&gt;Step 2: Prepare the concoction&lt;/h2&gt;
-&lt;p&gt;Run the preparatory file first&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./4&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvPreReq.sh
+&lt;p&gt;We enforce the usage of the default Python by storing the Python paths needed for the installation (before removing Anaconda from the path using the above command) by executing&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;py2Ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;which python2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;py2In&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;python2 -c &lt;span class=&quot;s2&quot;&gt;&quot;from distutils.sysconfig import get_python_inc; print(get_python_inc())&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;py2Pack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;python2 -c &lt;span class=&quot;s2&quot;&gt;&quot;from distutils.sysconfig import get_python_lib; print(get_python_lib())&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;py3Ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;which python3&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;py3In&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;python3 -c &lt;span class=&quot;s2&quot;&gt;&quot;from distutils.sysconfig import get_python_inc; print(get_python_inc())&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;py3Pack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;python3 -c &lt;span class=&quot;s2&quot;&gt;&quot;from distutils.sysconfig import get_python_lib; print(get_python_lib())&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Of course, Python2 installation will be needed after 2019. We next use these variables to force CMAKE to use these directories only&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; -DPYTHON2_EXECUTABLE&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$py2Ex&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ -DPYTHON2_INCLUDE_DIR&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$py2In&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ -DPYTHON2_PACKAGES_PATH&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$py2Pack&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ -DPYTHON3_EXECUTABLE&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$py3Ex&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ -DPYTHON3_INCLUDE_DIR&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$py3In&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ -DPYTHON3_PACKAGES_PATH&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$py3Pack&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Now, before running the actual building script, note that you MUST have anaconda removed from the environment PATH variable as otherwise, it detects a partial Conda-compliant version of QT5, which will lead to the final built openCV being unusable. Most likely, conda will be added to your shell starting code (.bashrc or .zshrc, for instance). After you have done that,&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./5&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;-&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;opencvInstall.sh
+&lt;p&gt;We next enable TBB (Threaded Building blocks, gives higher performance), V4L (Video library) and QT (Better image displayer)&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; -DWITH_TBB&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ON &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ -DWITH_V4L&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ON &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+ -DWITH_QT&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ON &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;We also explicitly disable CUDA, as compiling OpenCV with CUDA slows down the process significantly&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; -DWITH_CUDA&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;OFF &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&quot;step-3-configuring-cmake-using-ccmake&quot;&gt;Step 3: Configuring CMAKE using CCMAKE&lt;/h2&gt;
+&lt;p&gt;We build TIFF as OpenCV relies on an older version of libtiff, and using the system default libtiff in Ubunttu 14.04+ will throw errors.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; -DBUILD_TIFF&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ON &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;After the initial configuration, a ccmake prompt will come up, which lets you change the cmake parameters. As you have removed Anaconda Python from your PATH variable, it will not be detected by CMAKE. Hence, you have to manually input the location of your python variables (REFER: Images below. Replace /home/rsnk96/anaconda3 with your installation path). Press enter, and finish the building&lt;/p&gt;
+&lt;h2 id=&quot;step-5&quot;&gt;Step 5&lt;/h2&gt;
+&lt;p&gt;We finally make and install, and the installation should complete. We then re-add Anaconda to the PATH variable.&lt;/p&gt;
 
-&lt;!--![instructions-1](/static/img/blog/opencv-anaconda-install/opencv Anaconda Install.png)--&gt;
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/opencv-anaconda-install/opencv Anaconda Install.png&quot; alt=&quot;instructions1&quot; style=&quot;width: 1000px&quot; /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;/static/img/blog/opencv-anaconda-install/opencv Anaconda Install-2.png&quot; alt=&quot;instructions2&quot; style=&quot;width: 1000px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You might additionally face the problem of mismatched libtiff when building. If that is the case, remove libtiff from your system, use conda remove to remove libtiff from all your anaconda environments, and then run the shell script, which will build libtiff by itself&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;step-4-make-and-install&quot;&gt;Step 4: Make and Install&lt;/h2&gt;
-
-&lt;p&gt;Aaah you really don’t have to do anything after this. Just let the script do its job :-D&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If you face the error &lt;code class=&quot;highlighter-rouge&quot;&gt;fatal error: ft2build.h: No such file or directory&lt;/code&gt;, it is most likely because you have freetype enabled in contrib. Disable it using ` -DBUILD_opencv_freetype=OFF ..`&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-If you face any problem not mentioned here, feel free to ping me :-)&lt;/p&gt;
+&lt;p&gt;You can check out and download the whole script &lt;a href=&quot;https://github.com/rsnk96/Ubuntu-Setup-Scripts/blob/master/opencvDirectInstall.sh&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Feb 2017 00:00:00 +0530</pubDate>
         <link>http://localhost:4000//computervision/2017/02/23/computervision-opencv-full-install.html</link>
@@ -2588,7 +2598,7 @@ Do note that their documentation is not complete. The images for my entire colle
     
       <item>
         <title>OpenCV Installation on Anaconda Python in Linux</title>
-        <description>&lt;h2 id=&quot;update&quot;&gt;Update:&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;update&quot;&gt;&lt;strong&gt;Update&lt;/strong&gt;:&lt;/h2&gt;
 &lt;p&gt;There is an improved and better blog post on installing OpenCV &lt;a href=&quot;https://rsnk96.github.io/computervision/2017/02/23/computervision-opencv-full-install.html&quot;&gt;here&lt;/a&gt; on Ubuntu which will work regardless of whether you have Anaconda Python as your default Python or not. Please refer to that. I am leaving this post online purely in the interest of seeing the approach with which I had tackled the problem earlier&lt;/p&gt;
 
 &lt;p&gt;Before you get started, you must know this, that even as of OpenCV3.1, documented support is there only for VTK5.1, which is compatible with QT4, and so, for all the scripts provided on this webpage, we will be using QT4, not QT5&lt;/p&gt;
