@@ -1,0 +1,23 @@
+- name: 'Model Generalisabilitiy - Thompson Sampling on Disentangled Latent Variables'
+  i18n: 'thompsonDisent'
+  url: #'https://github.com/san25dec/VAE'
+  img: 'static/assets/img/landing/disent.jpg'
+  desc: "A project aimed at trying to improve the generalisability of a DQN across games using Visual Concept Learning to learn disentangled representations of certain state-spaces, and using this to build a complete dynamics model of a game"
+
+- name: 'Intelligent Ground Vehicle'
+  i18n: 'igv'
+  url: #'/Jack614/saplatform'
+  img: 'static/assets/img/landing/IGVC.png'
+  desc: 'The IGV of IIT Madras is a self-driving vehicle that navigates through unfamiliar tracks, avoiding dynamic obstacles. I worked on using Deep Learning for lane discovery in the same and identifying statistically likely thresholds for the same.'
+
+- name: 'Org-E'
+  i18n: 'orge'
+  url: 'https://github.com/rsnk96/org-e'
+  img: 'static/assets/img/landing/org_e.PNG'
+  desc: "I undertook Org-E as a project to build a solution to the clutter we buildin our digital life. It organizes files into folders based on type, and optionally rearranges the existing folders and the relocation of files too"
+
+- name: 'Interactive Distortion Correcter'
+  i18n: 'distCorrect'
+  url: 'https://github.com/rsnk96/Interactive-Distortion-Corrector'
+  img: 'static/assets/img/landing/distCorrect.jpg'
+  desc: "Finding the right value of the squared and fourth order coefficient for Brownian radial distortion correction can be a pain in the ass. This project was aimed at easing that process and helping you easily find the coefficient for a given image"

@@ -1,0 +1,7 @@
+# skills section data
+
+label: Ability
+id : cs
+aspects: Python(+TF+Numpy), C++, Linux, OpenCV, Machine Learing, AutoCAD, MATLAB, Photoshop / Illustrator, Torch (+Lua)
+percentage: 85, 80, 75, 85, 80, 65, 65, 70, 65
+

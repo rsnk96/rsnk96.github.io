@@ -1,0 +1,21 @@
+---
+layout: null
+---
+{
+	"code" : 0 ,
+	"data" : [
+	 {% for post in site.posts %}
+	{
+		"title" : "{{ post.title }} - {{ post.date | date_to_utc | date: '%Y-%m-%d'}}",
+<<<<<<< HEAD
+		"url" : "{{ post.url }}"
+=======
+		"url" : "{{ site.baseurl }}{{ post.url }}"
+>>>>>>> upstream/master
+	}
+	{% if forloop.rindex != 1  %}
+	,
+	{% endif %}
+    {% endfor %}
+	]
+}

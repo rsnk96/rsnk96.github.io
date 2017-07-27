@@ -1,0 +1,60 @@
+#NOTE: If it doesn't update in the webpage, simply change the i18n to some gen thing
+
+
+- name:
+    detail: Detect Technologies
+    i18n: detect
+  desc:
+    detail: In Detect Technologies, I lead the Computer Vision and Artificial Intelligence applied to Analysis of Drone Acquired Data.
+    i18n: detect_des
+  date:
+    detail: Present
+    i18n: detect_date
+  job:
+    detail: Computer Vision Lead & Data Analyst
+    i18n: detect_job
+  # icon: fa-gamepad
+  icon: fa-plus-square
+
+- name:
+    detail: Computer Vision Group, CFI
+    i18n: cvg
+  desc:
+    detail: Headed the Computer Vision Group at CFI, IIT Madras for a year, paving way for innovative projects in the field of Deep Learning and working closely with industries to solve challenges posed by them
+    i18n: cvg_des
+  date:
+    detail: May 2017
+    i18n: cvg_date
+  job:
+    detail: Club Head
+    i18n: cvg_job
+  icon: fa-cloud
+
+- name:
+    detail: Bhabha Atomic Research Centre
+    i18n: barc
+  desc:
+    detail: I worked on biomedical computer vision, image segmentation, and render optimization
+    i18n: barc_des
+  date:
+    detail: Jun 2016
+    i18n: barc_date
+  job:
+    detail: R&D Trainee
+    i18n: barc_job
+  icon: fa-plus-square
+
+- name:
+    detail: IIT Madras
+    i18n: undergrad
+  desc:
+    detail: I now study at IIT Madras, Chennai, India. I am majoring in Mechanical Engineering, with a minor in Robotics
+    i18n: undergrad_des
+  date:
+    detail: Present
+    i18n: undergrad_date
+  job:
+    detail: Undergraduate Education
+    i18n: undergrad_job
+  icon: fa-book
+  # icon: fa-plus-square

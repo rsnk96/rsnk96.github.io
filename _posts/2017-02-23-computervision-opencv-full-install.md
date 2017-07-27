@@ -9,7 +9,11 @@ tags: [ComputerVision,OpenCV,Python,Linux,Anaconda]
 icon: icon-centos
 ---
 
-In my earlier blog posts, I talk about adopting different methods for installing OpenCV if you use Anaconda Python. Well, I was an idiot, because I was just providing a jugaad solution. Turns out you can have a unified solution, and that is exactly what I have done [here](https://github.com/rsnk96/Ubuntu-Setup-Scripts/blob/master/opencvDirectInstall.sh). Use that link if you quickly want to get around knowing how it works, or if you're simply too lazy.
+In my earlier blog posts, I talk about adopting different methods for installing OpenCV if you use Anaconda Python. Well, I was an idiot, because I was just providing a jugaad solution. Turns out you can have a unified solution, and that is exactly what I have done in the script linked below
+
+[Complete OpenCV Installation Script available here](https://github.com/rsnk96/Ubuntu-Setup-Scripts/blob/master/opencvDirectInstall.sh).
+
+Use that link if you quickly want to get around knowing how it works, or if you're simply too lazy.
 
 This blog post explains what I have done to build a unified installation script.
 

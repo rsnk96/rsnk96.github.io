@@ -64,11 +64,11 @@ $ ./5\ -\ opencvInstall.sh
 
 After the initial configuration, a ccmake prompt will come up, which lets you change the cmake parameters. As you have removed Anaconda Python from your PATH variable, it will not be detected by CMAKE. Hence, you have to manually input the location of your python variables (REFER: Images below. Replace /home/rsnk96/anaconda3 with your installation path). Press enter, and finish the building
 
-<!--![instructions-1](/static/img/blog/opencv-anaconda-install/opencv Anaconda Install.png)-->
-<img src='/static/img/blog/opencv-anaconda-install/opencv Anaconda Install.png' alt='instructions1' style="width: 1000px">
+<!--![instructions-1](/static/assets/img/blog/opencv-anaconda-install/opencv Anaconda Install.png)-->
+<img src='/static/assets/img/blog/opencv-anaconda-install/opencv Anaconda Install.png' alt='instructions1' style="width: 1000px">
 <br>
 <br>
-<img src='/static/img/blog/opencv-anaconda-install/opencv Anaconda Install-2.png' alt='instructions2' style="width: 1000px">
+<img src='/static/assets/img/blog/opencv-anaconda-install/opencv Anaconda Install-2.png' alt='instructions2' style="width: 1000px">
 
 You might additionally face the problem of mismatched libtiff when building. If that is the case, remove libtiff from your system, use conda remove to remove libtiff from all your anaconda environments, and then run the shell script, which will build libtiff by itself
 

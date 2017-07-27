@@ -1,106 +1,58 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "rsnk"
-description: "rsnk's blog?'"
+title: "Homepage of rsnk"
+description: "Homepage and blog of rsnk"
 keywords: "rsnk, rsnk96,Jalpc,blog,Jekyll,github,Nikhil"
-baseurl: "/"
-url: "https://rsnk96.github.io"
+# baseurl: "/"
+url: https://rsnk96.github.io
+img_path: /static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
-# author
-author:
-  name: 'rsnk'
-  first_name: 'R S Nikhil Krishna'
-  last_name: '.'
-  email: 'rsnk96@gmail.com'
-  facebook_username: 'rsnk96'
-  github_username: 'rsnk96'
-  head_img: 'static/img/landing/dp.jpg'
-  desc: 'Why do I do what I do? Because "You either die a programmer, or live long enough to be the programmed". I am an undergraduate student at IIT Madras, programmer, numismatist, Music Lover (❤) and gamer. My current fields of interest include Computer Vision, Machine Learning, Reinforcement Learning, and AGI'
-
-# sections
-sections:
-  - id: 'about-me'
-    i18n: 'nav.about_me'
-    name: 'About'
-    tpl: 'about.html'
-    css: ''
-
-  - id: 'career'
-    i18n: 'nav.career'
-    name: 'Career'
-    tpl: 'career.html'
-    css: 'timeline'
-
-  - id: 'skills'
-    i18n: 'nav.skills'
-    name: 'Skills'
-    tpl: 'skills.html'
-    css: 'team'
-
-  - id: 'projects'
-    i18n: 'nav.projects'
-    name: 'Projects'
-    tpl: 'projects.html'
-    css: 'project'
-
-  - id: 'blog'
-    i18n: 'nav.blog'
-    name: 'Blog'
-    tpl: 'blog.html'
-    css: 'testimonials navy-section'
-
-  - id: 'links'
-    i18n: 'nav.link'
-    name: 'Links'
-    tpl: 'links.html'
-    css: 'contact'
-
-# localization
-# languages:
-#   - locale: 'en'
-#     flag: 'static/img/flags/United-States.png'
-#   # - locale: 'zh'
-  #   flag: 'static/img/flags/China.png'
-
-# blog img path
-img_path: 'http://www.jack003.com/static/img/blog'
-
-# # donate
-# donate:
-#   wechat: 'static/img/pay/wechat.png'
-#   alipay: 'static/img/pay/alipay.png'
+# author -- index page "about me" section
+author:  # change following line to your infomation.
+  name: rsnk  # Be used at blog posts' author.
+  first_name: R S Nikhil Krishna  # Be used at index page about me section.
+  last_name: .  # Be used at index page about me section.
+  avatar: /static/assets/img/landing/dp.jpg  # upload your avatar at directory and edit it.
+  github_username: rsnk96  # Leave blank if you don't have now
+  linkedin_id: rsnk96 # Leave blank if you don't have now
+  facebook_username: rsnk96  # Leave blank if you don't have now
+  twitter_username:   # Leave blank if you don't have now
+  email: rsnk96@gmail.com  # Leave blank if you don't have now
+#  cv: http://cv.jarrekk.com  # A online CV can be printed as PDF, leave blank if you don't have now
+  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
+  skill_icon1:
+    - name: fa-linux
+    - name: icon-cplusplus
+  skill_icon2:
+    - name: icon-python
+    - name: icon-shell
+  desc: 'Why do I do what I do? Because "You either die a programmer, or live long enough to be the programmed". I am a student at IIT Madras, programmer, numismatist, Music Lover (❤) and gamer. Current fields of interest include Computer Vision, Machine Learning, Reinforcement Learning, and AGI'
 
 # comment
-changyan:
-  # appid: cysfY7ULn
-  # conf: prod_861928934cecb7a18e15bedaed9dae29
 disqus:
 # https://help.disqus.com/customer/portal/articles/787016-how-to-create-an-api-application
   name: rsnk96-github-io
-  public_key: QynyAYpVI8Gwndf1jVKujxrZKeiu9N1nl4mlSfrvFifOmusa8O7Ta4zMQuqOyZfl
+  # public_key: QynyAYpVI8Gwndf1jVKujxrZKeiu9N1nl4mlSfrvFifOmusa8O7Ta4zMQuqOyZfl
 
-# share
-bshare:
-# COMMENTED OUT BY ME
-  # uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
+# analytics
+## google analytics
+ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
+  # id:
 
-# baidu analytics
-ba:
-  # uuid: 317acca9ef9255b934e46371e471431d
+## growingIO
+gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
+  # id:
 
-# google analytics
-ga:
-# COMMENTED OUT BY ME
-  # id: UA-73784599-1
+## donation
+donation: off  # type 'on'/'off' to choice display donation button at post page or not
 
-# growingIO
-gio:
-# COMMENTED OUT BY ME
-  # id: a49d4901c7853da9
+## carousels
+index_carousel: on
+blog_carousel: on
 
 # Build settings
-encoding: "utf-8"
+encoding: utf-8
 
 # other settings
 highlighter: rouge

@@ -18,86 +18,75 @@
     {% endif %}
   </title>
   <!-- favicon -->
-  <link rel="shortcut icon" href="{{ "static/img/favicon.ico" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.ico" | prepend: site.baseurl }}">
 
-  <!-- Third-party CSS -->
-  <link href="{{"bower_components/normalize-css/normalize.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"bower_components/animate.css/animate.min.css"| prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"bower_components/components-font-awesome/css/font-awesome.min.css"| prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"static/font-mfizz/font-mfizz.css"| prepend: site.baseurl }}" rel="stylesheet">
-  <!-- <link href="{{"bower_components/toastr/toastr.min.css"| prepend: site.baseurl }}" rel="stylesheet"> -->
-  <link href="{{"bower_components/jquery.gritter/css/jquery.gritter.css"| prepend: site.baseurl }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "search/css/cb-search.css" | prepend: site.baseurl }}">
+  <!-- Main CSS -->
+  <link href="{{ "/static/assets/app-20170722.min.css" | prepend: site.baseurl }}" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="{{"static/css/style.min.css"| prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"static/css/pygments.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <!-- Main Scripts -->
+  <script src="{{"/static/assets/app-20170722.min.js"| prepend: site.baseurl }}"></script>
 
-  <!-- Scripts -->
-  <script src="{{"bower_components/jquery/dist/jquery.min.js"| prepend: site.baseurl }}"></script>
-  <script src="{{ "search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var initial = 0;
+      var show = true;
 
-  <!-- cb-search -->
-  <script src="{{ "search/js/cb-search.js" | prepend: site.baseurl }}"></script>
-  <script>
+      var toggleSearch = function (visible) {
+        initial = 0;
+        show = !visible;
+        var visibility = visible ? 'block' : 'none';
+
+        $("#search-content").val("");
+        $(".search-tool").css("display", visibility);
+      };
+
+      var shouldToggle = function (time) {
+        var gap = time - initial;
+        initial = time;
+        return gap < 500;
+      };
+
+      $(document).keyup(function (e) {
+        var now = new Date().getTime();
+        if (e.keyCode == 17 && shouldToggle(now)) {
+          toggleSearch(show);
+        } else if (e.keyCode == 27) {
+          toggleSearch(false);
+        }
+      });
+
+      $("#search-content").keyup(function (e) {
+        var now = new Date().getTime();
+        if (e.keyCode == 17 && shouldToggle(now)) {
+          toggleSearch(show);
+        }
+      });
+
+      $("#close-btn").click(function () {
+        toggleSearch(false);
+      });
+
+      $("#search-btn").click(function() {
+        toggleSearch(true);
+      });
+
+      $.getJSON("{{ "/search/cb-search.json" | prepend: site.baseurl }}")
+        .done(function (data) {
+          if (data.code == 0) {
+            $("#search-content").typeahead({
+              source: data.data,
+              displayText: function (item) {
+                return item.title;
+              },
+              afterSelect: function (item) {
+                window.location.href = item.url;
+              }
+            });
+          }
+        });
+    });
     $(function(){
         $("pre").css('display','block');
     });
   </script>
-  <!-- Mainly scripts -->
-  <script src="{{"bower_components/bootstrap/dist/js/bootstrap.min.js"| prepend: site.baseurl }}"></script>
-  <script src="{{"bower_components/metisMenu/dist/metisMenu.min.js"| prepend: site.baseurl }}"></script>
-  <script src="{{"bower_components/jquery-slimscroll/jquery.slimscroll.min.js"| prepend: site.baseurl }}"></script>
-
-  <!-- Peity -->
-  <script src="{{"bower_components/peity/jquery.peity.min.js"| prepend: site.baseurl }}"></script>
-
-  <script src="{{"bower_components/PACE/pace.min.js"| prepend: site.baseurl }}"></script>
-  <script src="{{"bower_components/wow/dist/wow.min.js"| prepend: site.baseurl }}"></script>
-  <!-- Custom and plugin javascript -->
-  <script src="{{"static/js/inspinia.js"| prepend: site.baseurl }}"></script>
-
-  <!-- Rickshaw -->
-  <script src="{{"bower_components/rickshaw/vendor/d3.v3.js"| prepend: site.baseurl }}"></script>
-  <script src="{{"bower_components/rickshaw/rickshaw.min.js"| prepend: site.baseurl }}"></script>
-
-
-  <!-- jPages -->
-  <script src="{{"static/js/jPages.js" | prepend: site.baseurl}}"></script>
-  <script src="{{"static/js/js.js" | prepend: site.baseurl}}"></script>
-  <script id="dsq-count-scr" src="//jalpc.disqus.com/count.js" async></script>
-  <script type="text/javascript">
-        $(function(){
-          /* initiate the plugin */
-          $("div.pag-holder").jPages({
-              containerID  : "pag-itemContainer",
-              perPage      : 5,  /* num of items per page */
-              startPage    : 1,
-              startRange   : 1,
-              midRange     : 3,
-              endRange     : 1
-          });
-      });
-  </script>
-
-<!-- GrowingIO -->
-{% if site.gio %}
-  <script>
-    var _vds = _vds || [];
-    window._vds = _vds;
-    (function(){
-      _vds.push(['setAccountId', '{{ site.gio.id }}']);
-      (function() {
-        var vds = document.createElement('script');
-        vds.type='text/javascript';
-        vds.async = true;
-        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(vds, s);
-      })();
-    })();
-  </script>
-{% endif %}
-
 </head>
