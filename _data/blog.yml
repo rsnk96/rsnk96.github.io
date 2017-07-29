@@ -1,28 +1,28 @@
 # blog page sections
 - name: Blog
-  href: '/blog/'
+  href: /blog/
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
 - name: Python
-  href: '/python/'
+  href: /python/
 
 - name: Linux
-  href: '/linux/'
+  href: /linux/
 
 - name: Computer Vision
-  href: '/computervision/'
+  href: /computervision/
 
 - name: Numismatics
-  href: '/numismatics/'
+  href: /numismatics/
 
 # - name: Database
-#   href: '/database/'
+#   href: /database/
 
 # - name: Mac
-#   href: '/mac/'
+#   href: /mac/
 
 - name: Life
-  href: #'/life/'
+  href: #/life/
 
 # Don't display donation page: change donation to off at file '_config.yml'
 - name: Donate
